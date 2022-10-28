@@ -1,0 +1,34 @@
+{
+  "name": "css-frameworks-ca-sjurhassel",
+  "version": "0.0.1",
+  "description": "CA in Css frameworks for Sjur Hassel at Noroff",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass src/scss:dist/css",
+    "watch": "sass --watch src/scss:dist/css & live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VaNomad/css-frameworks-ca.git"
+  },
+  "keywords": [
+    "Bootstrap",
+    "Css",
+    "Scss",
+    "CA"
+  ],
+  "author": "Sjur Hassel <sjur.hassel@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VaNomad/css-frameworks-ca/issues"
+  },
+  "homepage": "https://github.com/VaNomad/css-frameworks-ca#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "sass": "^1.55.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  }
+}
