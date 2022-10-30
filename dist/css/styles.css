@@ -10772,6 +10772,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.card {
+  max-width: 540px;
+}
+
 .navbar-brand img {
   width: 50px;
 }
