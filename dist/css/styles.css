@@ -6,6 +6,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
 :root {
   --bs-blue: #31fd0d;
   --bs-indigo: #b491ee;
@@ -10776,13 +10777,34 @@ textarea.form-control-lg {
   max-width: 540px;
 }
 
+.carousel-item img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 400px;
+  max-width: 400px;
+}
+
 .navbar-brand img {
-  width: 50px;
+  width: 100px;
+}
+
+.navbar-collapse {
+  margin-left: 11rem;
+}
+
+.logo-text {
+  font-family: "Monoton", cursive;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-family: "Koulen", cursive;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
 }
 
 .nav-item {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  margin-right: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
