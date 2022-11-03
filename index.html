@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/fbce6b241f.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/dist/css/styles.css">
   <title>css-frameworks-ca</title>
 </head>
@@ -42,13 +43,42 @@
   </header>
 
   <main>
-    <div class="main-container container mt-6">
+
+    <!-- New Message -->
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-8">
+          <form>
+            <div class="border bg-primary rounded-pill p-4">
+              <div class="d-flex p-2">
+                <div class="col-4 p-2">
+                  <img src="/assets/images/avatar-50b2edf3b88fc77b63c3f11440e19bc7.jpg"
+                    class="img-fluid img-thumbnail rounded-circle shadow p-2" alt="...">
+                </div>
+                <div class="col d-flex align-items-center">
+                  <input type="text-area" class="form-control" id="message" placeholder="write here">
+                </div>
+                <div class="col-2 d-flex align-items-center justify-content-center">
+                  <a href=""><i class="fa-solid fa-plus border rounded-circle p-4 shadow"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rankings Carousel -->
+    <div class="container">
       <div class="row">
-        <!-- Left column -->
-        <div class="col-6 mx-auto">
-          <!-- Rankings Carousel -->
+        <div class="col">
           <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <h3>Rankings:</h3>
+            <h3 class="text-center mb-3">Rankings:</h3>
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="/assets/images/images.jpeg" class="d-block mx-auto w-100 rounded" alt="...">
@@ -74,90 +104,86 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+        </div>
+      </div>
+    </div>
 
-          <!-- MESSAGES -->
-          <div>
-            <h3>Messages:</h3>
-            <div class="border rounded mx-auto m-4">
-              <div class="row m-3 d-flex">
-                <div class="col-4">
-                  <img src="/assets/images/avatar-50b2edf3b88fc77b63c3f11440e19bc7.jpg"
-                    class="img-fluid rounded-circle shadow" alt="...">
-                </div>
-                <div class="col-8 d-flex flex-column p-2 align-items-center">
-                  <div class="card-body">
-                    <h5 class="card-title mb-3">Nelly</h5>
-                    <p class="card-text">Yo Zucchinizit!<br>Did you check out Artemis?<br>It's just out of this world!!!
-                    </p>
-                    <p class="card-text"></p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="border rounded mx-auto m-4">
-              <div class="row m-3 d-flex">
-                <div class="col-8 d-flex flex-column p-2 align-items-center">
-                  <div class="card-body">
-                    <h5 class="card-title mb-3">Graham</h5>
-                    <p class="card-text">Yo Zucchinizit!<br>Did you check out Artemis?<br>It's just out of this world!!!
-                    </p>
-                    <p class="card-text"></p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="/assets/images/avatar-62f050a8960d6b4168be5202fe112d52.jpg"
-                    class="img-fluid rounded-circle shadow" alt="...">
-                </div>
-              </div>
-            </div>
-            <div class="border rounded mx-auto m-4">
-              <div class="row m-3 d-flex">
-                <div class="col-4">
-                  <img src="/assets/images/avatar-dcc934724bc0ac64eaf3a1438c6d078d.jpg"
-                    class="img-fluid rounded-circle shadow" alt="...">
-                </div>
-                <div class="col-8 d-flex flex-column p-2 align-items-center">
-                  <div class="card-body">
-                    <h5 class="card-title mb-3">Clarice</h5>
-                    <p class="card-text">Yo Zucchinizit!<br>Did you check out Artemis?<br>It's just out of this world!!!
-                    </p>
-                    <p class="card-text"></p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-              </div>
+    <div class="container">
+      <div class="row">
+        <h3 class="mb-3">Latest Uploads:</h3>
+        <div class="col-4 card mb-3 mx-auto">
+          <img src="/assets/images/Unknown4.jpeg" class="latest-img d-flex m-2 rounded" alt="...">
+          <div class="card-body text-center">
+            <h5>FADING TRIAL</h5>
+          </div>
+        </div>
+        <div class="col-4 card mb-3 mx-auto">
+          <img src="/assets/images/Unknown2.jpeg" class="latest-img d-flex mt-3 m-2 rounded" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title">EMERGENCY BROADCAST</h5>
+          </div>
+        </div>
+        <div class="col-4 card mb-3 mx-auto">
+          <img src="/assets/images/Unknown8.jpeg" class="latest-img d-flex mt-3 m-2 rounded" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title">ZEBRA MARKERS</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h3>Messages:</h3>
+      <div class="row d-flex flex-column">
+        <div class="col-5 d-flex border border rounded-pill mx-auto bg-primary">
+          <div class="p-4">
+            <img src="/assets/images/avatar-50b2edf3b88fc77b63c3f11440e19bc7.jpg"
+              class="img-fluid img-thumbnail rounded-circle shadow" alt="...">
+          </div>
+          <div class="col-8 d-flex flex-column pl-2 align-items-center justify-content-center">
+            <div>
+              <h5 class="mb-3">Nelly</h5>
+              <p class="my-0">Yo Zucchinizit!</p>
+              <p class="my-0">Did you check out Artemis?</p>
+              <p class="card-text">It's just out of this world!!!</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
           </div>
         </div>
 
-        <!-- Right Column -->
-        <!-- Latest uploads -->
-        <div class="col-4 mx-auto">
-          <div class="card mb-3">
-            <img src="/assets/images/Unknown4.jpeg" class="latest-img d-flex m-2 rounded" alt="...">
-            <div class="card-body text-center">
-              <h5>FADING TRIAL</h5>
+        <div class="col-5 d-flex border border rounded-pill mx-auto bg-primary">
+          <div class="col-8 d-flex flex-column pl-2 align-items-center justify-content-center">
+            <div>
+              <h5 class="mb-3">Graham</h5>
+              <p class="my-0">Yo Zucchinizit!</p>
+              <p class="my-0">Did you check out Artemis?</p>
+              <p class="card-text">It's just out of this world!!!</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
           </div>
-          <div class="card mb-3">
-            <img src="/assets/images/Unknown2.jpeg" class="latest-img d-flex mt-3 m-2 rounded" alt="...">
-            <div class="card-body text-center">
-              <h5 class="card-title">EMERGENCY BROADCAST</h5>
-            </div>
+          <div class="p-4">
+            <img src="/assets/images/avatar-62f050a8960d6b4168be5202fe112d52.jpg"
+              class="img-fluid img-thumbnail rounded-circle shadow" alt="...">
           </div>
-          <div class="card mb-3">
-            <img src="/assets/images/Unknown8.jpeg" class="latest-img d-flex mt-3 m-2 rounded" alt="...">
-            <div class="card-body text-center">
-              <h5 class="card-title">ZEBRA MARKERS</h5>
+        </div>
+
+        <div class="col-5 d-flex border border rounded-pill mx-auto bg-primary">
+          <div class="p-4">
+            <img src="/assets/images/avatar-dcc934724bc0ac64eaf3a1438c6d078d.jpg"
+              class="img-fluid img-thumbnail rounded-circle shadow" alt="...">
+          </div>
+          <div class="col-8 d-flex flex-column pl-2 align-items-center justify-content-center">
+            <div>
+              <h5 class="mb-3">Clarice</h5>
+              <p class="my-0">Yo Zucchinizit!</p>
+              <p class="my-0">Did you check out Artemis?</p>
+              <p class="card-text">It's just out of this world!!!</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
           </div>
         </div>
       </div>
-
     </div>
-
 
   </main>
 
