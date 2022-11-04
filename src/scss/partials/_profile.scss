@@ -1,3 +1,8 @@
+//profile-section
+.profile img {
+  max-width: 300px;
+}
+
 .about i {
   color: black;
   font-size: 30px;
@@ -7,14 +12,34 @@
   margin-left: 5rem;
 }
 
-.profile img {
-  max-width: 300px;
-}
-
+//friends-section
 .friends img {
   max-width: 200px;
 }
 
 .friends h2 {
   font-size: 2rem;
+}
+
+//recent posts-section
+.recents-img-box-left {
+  transform: translateX(-50%);
+}
+
+.recents-img-box-right {
+  transform: translateX(50%);
+}
+
+.recents img {
+  max-width: 350px;
+}
+
+.recents-text-left {
+  font-size: 20px;
+  transform: translateX(-10%);
+}
+
+.recents-text-right {
+  font-size: 20px;
+  transform: translateX(10%);
 }
