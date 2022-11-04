@@ -10802,6 +10802,14 @@ body {
   font-size: 30px;
 }
 
+.msg-img {
+  max-width: 80px;
+}
+
+body::placeholder {
+  color: black;
+}
+
 .navbar-brand img {
   width: 100px;
 }
