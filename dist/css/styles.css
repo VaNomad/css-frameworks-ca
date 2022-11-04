@@ -10777,6 +10777,16 @@ body {
   margin-top: 170px;
 }
 
+.form-control::placeholder {
+  color: white;
+}
+
+#textarea {
+  resize: none;
+  background-color: #8EB799;
+  border: none;
+}
+
 .card {
   max-width: 340px;
 }

@@ -51,35 +51,33 @@
           <form>
             <div class="border bg-primary rounded-pill p-4">
               <div class="d-flex p-2">
-                <div class="col-4 p-2">
+                <div class="col-4">
                   <img src="/assets/images/avatar-50b2edf3b88fc77b63c3f11440e19bc7.jpg"
                     class="img-fluid img-thumbnail rounded-circle shadow p-2" alt="...">
                 </div>
-                <div class="col d-flex align-items-center">
-                  <input type="text-area" class="form-control" id="message" placeholder="write here">
+                <div class="p-3 d-flex">
+                  <textarea class="form-control" id="textarea" rows="6" cols="30" placeholder="write new message here..."></textarea>
                 </div>
                 <div class="col-2 d-flex align-items-center justify-content-center">
-                  <a href=""><i class="fa-solid fa-plus border rounded-circle p-4 shadow"></i></a>
+                  <a href="" class="border rounded-pill p-4 shadow" style="color: black; font-size: 30px;"><i class="fa-solid fa-plus"></i></a>
                 </div>
+                <button type="submit" class="btn" style="font-size: 30px;"><i class="fa-solid fa-paper-plane"></i></button>
               </div>
             </div>
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            
+            
           </form>
         </div>
       </div>
     </div>
 
     <!-- Rankings Carousel -->
-    <div class="container">
+    <div class="container my-5">
       <div class="row">
         <div class="col">
           <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <h3 class="text-center mb-3">Rankings:</h3>
-            <div class="carousel-inner">
+            <div class="carousel-outer">
               <div class="carousel-item active">
                 <img src="/assets/images/images.jpeg" class="d-block mx-auto w-100 rounded" alt="...">
                 <figcaption class="text-center">The hottest new song</figcaption>
@@ -108,22 +106,23 @@
       </div>
     </div>
 
+    <!-- Latest Uploads: -->
     <div class="container">
-      <div class="row">
-        <h3 class="mb-3">Latest Uploads:</h3>
-        <div class="col-4 card mb-3 mx-auto">
+      <div class="row d-flex flex-column">
+        <h3 class="mb-3 text-center">Latest Uploads:</h3>
+        <div class="col-4 card mb-4 mx-auto">
           <img src="/assets/images/Unknown4.jpeg" class="latest-img d-flex m-2 rounded" alt="...">
           <div class="card-body text-center">
             <h5>FADING TRIAL</h5>
           </div>
         </div>
-        <div class="col-4 card mb-3 mx-auto">
+        <div class="col-4 card mb-4 mx-auto">
           <img src="/assets/images/Unknown2.jpeg" class="latest-img d-flex mt-3 m-2 rounded" alt="...">
           <div class="card-body text-center">
             <h5 class="card-title">EMERGENCY BROADCAST</h5>
           </div>
         </div>
-        <div class="col-4 card mb-3 mx-auto">
+        <div class="col-4 card mb-4 mx-auto">
           <img src="/assets/images/Unknown8.jpeg" class="latest-img d-flex mt-3 m-2 rounded" alt="...">
           <div class="card-body text-center">
             <h5 class="card-title">ZEBRA MARKERS</h5>
@@ -133,9 +132,9 @@
     </div>
 
     <div class="container">
-      <h3>Messages:</h3>
+      <h3 class="text-center">Messages:</h3>
       <div class="row d-flex flex-column">
-        <div class="col-5 d-flex border border rounded-pill mx-auto bg-primary">
+        <div class="col-5 d-flex border border rounded-pill mx-auto bg-primary mb-2">
           <div class="p-4">
             <img src="/assets/images/avatar-50b2edf3b88fc77b63c3f11440e19bc7.jpg"
               class="img-fluid img-thumbnail rounded-circle shadow" alt="...">
@@ -151,7 +150,7 @@
           </div>
         </div>
 
-        <div class="col-5 d-flex border border rounded-pill mx-auto bg-primary">
+        <div class="col-5 d-flex border border rounded-pill mx-auto bg-primary mb-2">
           <div class="col-8 d-flex flex-column pl-2 align-items-center justify-content-center">
             <div>
               <h5 class="mb-3">Graham</h5>
@@ -167,7 +166,7 @@
           </div>
         </div>
 
-        <div class="col-5 d-flex border border rounded-pill mx-auto bg-primary">
+        <div class="col-5 d-flex border border rounded-pill mx-auto bg-primary mb-2">
           <div class="p-4">
             <img src="/assets/images/avatar-dcc934724bc0ac64eaf3a1438c6d078d.jpg"
               class="img-fluid img-thumbnail rounded-circle shadow" alt="...">
