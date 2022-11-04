@@ -2,6 +2,7 @@ body {
   margin-top: 170px;
 }
 
+//Messages:
 .form-control::placeholder {
   color: white;
 }
@@ -12,8 +13,9 @@ body {
   border: none;
 }
 
+//Latest uploads:
 .card {
-  max-width: 340px;
+  max-width: 240px;
 }
 
 .carousel-item img {
