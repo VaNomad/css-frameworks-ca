@@ -3,6 +3,11 @@ body {
 }
 
 //Messages:
+
+.new-message img {
+  max-width: 100px;
+}
+
 .form-control::placeholder {
   color: white;
 }

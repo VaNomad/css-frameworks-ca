@@ -10777,6 +10777,10 @@ body {
   margin-top: 170px;
 }
 
+.new-message img {
+  max-width: 100px;
+}
+
 .form-control::placeholder {
   color: white;
 }
@@ -10836,7 +10840,7 @@ body {
 }
 
 .recents img {
-  max-width: 350px;
+  max-width: 200px;
 }
 
 .recents-text-left {
