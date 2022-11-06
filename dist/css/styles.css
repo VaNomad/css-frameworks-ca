@@ -11003,12 +11003,7 @@ body {
 }
 
 .about i {
-  color: black;
-  font-size: 30px;
-}
-
-.about p {
-  margin-left: 5rem;
+  color: #000;
 }
 
 .wall-post img {
@@ -11044,11 +11039,11 @@ body {
 }
 
 .form-control::placeholder {
-  color: black;
+  color: #000;
 }
 
 .btn {
-  color: white;
+  color: #fff;
 }
 
 .navbar-brand img {
@@ -11066,10 +11061,6 @@ body {
 .nav-link {
   font-family: "Koulen", cursive;
   letter-spacing: 2px;
-}
-
-.nav-item {
-  margin-right: 3rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
