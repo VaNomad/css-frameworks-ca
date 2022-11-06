@@ -10940,12 +10940,29 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-body {
-  margin-top: 170px;
+h1, .h1,
+h2,
+.h2,
+h3,
+.h3 {
+  font-family: "Koulen", cursive;
+  letter-spacing: 4px;
 }
 
-.new-message img {
-  max-width: 150px;
+h4, .h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  margin-top: 190px;
+}
+
+.fa-user-plus {
+  font-size: 100px;
 }
 
 .form-control::placeholder {
@@ -10975,6 +10992,10 @@ body {
 
 .msg-img {
   max-width: 80px;
+}
+
+.new-message img {
+  max-width: 150px;
 }
 
 .profile img {
