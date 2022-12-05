@@ -46,7 +46,7 @@
     <div class="container">
       <h1 class="">Register Account</h1>
 
-      <form id="registerForm" class="row g-3 mt-5" method="post" action="/auth/register">
+      <form id="registerForm" class="row g-3 mt-5" method="post">
         <div class="col-md-12 col-lg-10 mx-auto my-4">
           <input type="text" name="name" pattern="^[\w]+$" title="User name must only contain lower case and Upper case characters, numbers and underscore: _ Example: YourNAME_8899" class="form-control p-4" id="userName" placeholder="Full Name or User Name" required>
         </div>
@@ -54,7 +54,7 @@
           <input type="email" name="email" pattern="^[\w\-.]+@(stud.)?noroff.no$" title="It is only allowed for users tha have a stud.noroff.no or noroff.no account to register. Example: my_name8899@stud.noroff.no/noroff.no" class="form-control p-4" id="eMail" placeholder="Your E-mail" required>
         </div>
         <div class="col-md-12 col-lg-10 mx-auto my-4">
-          <input type="password" name="password" minlength="8" class="form-control p-4" id="password" placeholder="Your password" required>
+          <input type="password" name="password" minlength=8 class="form-control p-4" id="password" placeholder="Your password" required>
         </div>
         <div class="col-md-12 col-lg-10 mx-auto my-4">
           <input type="url" name="banner" class="form-control p-4" id="banner" placeholder="Banner">
@@ -62,8 +62,7 @@
         <div class="col-md-12 col-lg-10 mx-auto my-4">
           <input type="url" name="avatar" class="form-control p-4" id="avatar" placeholder="Avatar">
         </div>
-        
-        <button type="button form-control" class="btn btn-success col-lg-10 mx-auto p-2 my-5 p-4">CREATE ACCOUNT</button>
+        <button type="submit" class="btn btn-success col-lg-10 mx-auto p-2 my-5 p-4">CREATE ACCOUNT</button>
       </form>
 
   </main>
