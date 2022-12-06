@@ -1,3 +1,5 @@
+import { setRegistryFormListener } from "./api/handlers/register.js";
+
 
 export function router() {
   const path = window.location.pathname;
@@ -17,4 +19,3 @@ export function router() {
   }
 }
 
-router();
