@@ -16,24 +16,21 @@
 
 // }
 
-const form = document.querySelector("#registerForm");
 
-function registerForm() {
-    form.addEventListener("submit", (event) => {
+
+ export function setRegistryFormListener() {
+    const registryForm = document.querySelector("#registerForm");
+
+    registryForm.addEventListener("submit", (event) => {
         event.preventDefault();
-        console.log(form);
-        
         const form = event.target;
-        
         const formData = new FormData(form);
         const profile = Object.fromEntries(formData.entries());
         console.log(profile);
-        
-    
-        
     });
-}
+};
 
 
-registerForm();
+
+
 

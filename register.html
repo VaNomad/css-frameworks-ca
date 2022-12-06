@@ -6,8 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/dist/css/styles.css">
-  <script src="/js/api/auth/handlers/register.js" defer type="module"></script>
+  <script src="https://kit.fontawesome.com/fbce6b241f.js" crossorigin="anonymous"></script>
   <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer type="module"></script>
+  <script src="/js/api/auth/index.js" defer type="module"></script>
+  <script src="/js/api/auth/handlers/register.js" defer type="module"></script>
   <title>DEMO TAPE | Login Page</title>
 </head>
 
@@ -48,7 +50,7 @@
 
       <form id="registerForm" class="row g-3 mt-5" method="post">
         <div class="col-md-12 col-lg-10 mx-auto my-4">
-          <input type="text" name="name" pattern="^[\w]+$" title="User name must only contain lower case and Upper case characters, numbers and underscore: _ Example: YourNAME_8899" class="form-control p-4" id="userName" placeholder="Full Name or User Name" required>
+          <input type="text" name="name" title="User name must only contain lower case and Upper case characters, numbers and underscore: _ Example: YourNAME_8899" class="form-control p-4" id="userName" placeholder="Full Name or User Name" required>
         </div>
         <div class="col-md-12 col-lg-10 mx-auto my-4">
           <input type="email" name="email" pattern="^[\w\-.]+@(stud.)?noroff.no$" title="It is only allowed for users tha have a stud.noroff.no or noroff.no account to register. Example: my_name8899@stud.noroff.no/noroff.no" class="form-control p-4" id="eMail" placeholder="Your E-mail" required>
