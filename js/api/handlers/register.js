@@ -29,11 +29,9 @@ import { register } from "../auth/registerCalls.js";
         const formData = new FormData(form);
         const profile = Object.fromEntries(formData.entries());
         console.log(profile);
-        const action = form.action;
-        const method = form.method;
 
         //send to API
-        register(profile, action, method);
+        register(profile);
     });
 };
 
