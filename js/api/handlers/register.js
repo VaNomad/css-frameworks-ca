@@ -1,7 +1,7 @@
 
 // import { API_BASE_URL } from "./constants.mjs";
 
-import { register } from "../auth/registerCalls.js";
+import { registerNewUser } from "../auth/registerCalls.js";
 
 // export async function register(url, profile, method) {
     
@@ -31,7 +31,7 @@ import { register } from "../auth/registerCalls.js";
         console.log(profile);
 
         //send to API
-        register(profile);
+        registerNewUser(profile);
     });
 };
 
