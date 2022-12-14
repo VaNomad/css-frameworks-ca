@@ -1,6 +1,6 @@
 import { API_SOCIAL_URL } from "../../constants.js";
 
-const registerURL = `${API_SOCIAL_URL}/auth/register`;
+export const registerURL = `${API_SOCIAL_URL}/auth/register`;
 console.log(registerURL);
 
 const method = "post";
