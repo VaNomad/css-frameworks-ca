@@ -1,10 +1,11 @@
 import { API_SOCIAL_URL } from "../../constants.js";
 
-const action = "/auth/register";
 const method = "post";
 
 export async function register(profile) {
-  const registerURL = API_SOCIAL_URL + action;
+  try {
+  // const registerURL = API_SOCIAL_URL + action;
+  const registerURL = `${API_SOCIAL_URL}/auth/register`;
   const body = JSON.stringify(profile);
   console.log(registerURL);
 
@@ -17,7 +18,11 @@ export async function register(profile) {
   })
   
   const result = await response.json();
-  console.log(result);
-  
-
+    console.log(result);
+    
+  } catch (error) {
+    console.log(error, "The API call failed");
+    
+  }
 }
+
