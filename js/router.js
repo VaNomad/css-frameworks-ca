@@ -1,4 +1,5 @@
-import { setRegistryFormListener } from "./api/handlers/register.js";
+import { registerFormListener } from "./api/handlers/registerHandler.js";
+import { loginFormListener } from "./api/handlers/loginHandler.js";
 
 
 export function router() {
@@ -12,10 +13,11 @@ export function router() {
       return;
     case "/register.html":
       console.log("register");
-      setRegistryFormListener();
+      registerFormListener();
       return;
-      
-      
+    case "/login.html":
+      console.log("login");
+      loginFormListener();
   }
 }
 

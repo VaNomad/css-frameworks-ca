@@ -2,31 +2,33 @@ import {
   API_SOCIAL_URL
 } from "../../constants.js";
 
-import {
-  registerURL
-} from "./registerCall.js";
+const loginURL = `${API_SOCIAL_URL}/auth/login`;
+console.log(loginURL);
 
-
-async function loginUser(registerURL, profile) {
+export async function loginUser(registerURL, login) {
   try {
-    const body = JSON.stringify(profile);
+    const body = JSON.stringify(login);
+
     console.log(body);
-
-
-    const response = await fetch(registerURL, {
+    
+    const response = await fetch(loginURL, {
       headers: {
         "Content-Type": "application/json"
       },
-      method,
-      body
-    })
+      method: 'POST',
+      body: JSON.stringify(login),
+    });
     console.log(response);
 
     const json = await response.json();
     console.log(json);
+
   } catch (error) {
+    console.log("The API call failed");
     console.log(error);
     
   }
 }
-loginUser(loginUrl, profile);
+loginUser(loginURL);
+
+//payload

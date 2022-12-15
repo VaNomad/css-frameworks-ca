@@ -20,7 +20,7 @@ import { registerNewUser } from "../auth/registerCall.js";
 
 
 
- export function setRegistryFormListener() {
+ export function registerFormListener() {
     const registryForm = document.querySelector("#registerForm");
 
     registryForm.addEventListener("submit", (event) => {
