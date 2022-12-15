@@ -38,6 +38,4 @@ export async function registerNewUser(profile) {
   } catch (error) {
     alert(error, "The API call failed");
   }
-  // return (result)
 }
-registerNewUser(registerURL);

@@ -5,7 +5,9 @@ import {
 const loginURL = `${API_SOCIAL_URL}/auth/login`;
 console.log(loginURL);
 
-export async function loginUser(registerURL, login) {
+const method = "post";
+
+export async function loginUser(loginURL) {
   try {
     const body = JSON.stringify(login);
 
@@ -15,8 +17,8 @@ export async function loginUser(registerURL, login) {
       headers: {
         "Content-Type": "application/json"
       },
-      method: 'POST',
-      body: JSON.stringify(login),
+      method,
+      body
     });
     console.log(response);
 
@@ -29,6 +31,5 @@ export async function loginUser(registerURL, login) {
     
   }
 }
-loginUser(loginURL);
 
-//payload
+

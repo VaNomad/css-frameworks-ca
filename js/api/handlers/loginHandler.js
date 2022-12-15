@@ -1,9 +1,5 @@
 import { loginUser } from "../auth/loginCall.js";
 
-
-
-
-
 export function loginFormListener() {
   const loginForm = document.querySelector("#loginForm");
 
