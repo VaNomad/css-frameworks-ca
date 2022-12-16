@@ -10,12 +10,12 @@ const method = "post";
 /**
  * API call that registeres a new user
  * @param {string} registerURL
- * @param {string} profile 
+ * @param {FormData} profile 
  * ```js
  * registerNewUser(registerURL, profile)
  * ```
  */
-export async function registerNewUser(profile) {
+export async function registerNewUser(registerURL, profile) {
   try {
 
     const body = JSON.stringify(profile);
