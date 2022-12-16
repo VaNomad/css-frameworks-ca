@@ -36,6 +36,6 @@ export async function registerNewUser(profile) {
     console.log(result);
 
   } catch (error) {
-    alert(error, "The API call failed");
+    alert(error, "The register account API call failed");
   }
 }

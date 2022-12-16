@@ -7,11 +7,9 @@ console.log(loginURL);
 
 const method = "post";
 
-export async function loginUser(loginURL) {
+export async function loginUser(login) {
   try {
     const body = JSON.stringify(login);
-
-    console.log(body);
     
     const response = await fetch(loginURL, {
       headers: {
@@ -26,7 +24,7 @@ export async function loginUser(loginURL) {
     console.log(json);
 
   } catch (error) {
-    console.log("The API call failed");
+    console.log("The login API call failed");
     console.log(error);
     
   }

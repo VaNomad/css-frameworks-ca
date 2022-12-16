@@ -6,3 +6,7 @@
 .btn {
   color: $white;
 }
+
+input::placeholder {
+  color: $red;
+}
