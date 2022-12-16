@@ -49,7 +49,7 @@
 
       <form id="registerForm" class="row g-3 mt-5">
         <div class="col-md-12 col-lg-10 mx-auto my-4">
-          <input type="text" name="name" title="User name must only contain lower case and Upper case characters, numbers and underscore: _ Example: YourNAME_8899" class="form-control p-4" id="userName" placeholder="Full Name or User Name" required>
+          <input type="text" name="name" pattern="^[\w]+$" maxlength="20" title="User name must only contain lower case and Upper case characters, numbers and underscore: _ Example: YourNAME_8899" class="form-control p-4" id="userName" placeholder="Full Name or User Name" required>
         </div>
         <div class="col-md-12 col-lg-10 mx-auto my-4">
           <input type="email" name="email" pattern="^[\w\-.]+@(stud.)?noroff.no$" title="It is only allowed for users tha have a stud.noroff.no or noroff.no account to register. Example: my_name8899@stud.noroff.no/noroff.no" class="form-control p-4" id="eMail" placeholder="Your E-mail" required>
@@ -63,7 +63,7 @@
         <div class="col-md-12 col-lg-10 mx-auto my-4">
           <input type="url" name="avatar" class="form-control p-4" id="avatar" placeholder="Avatar">
         </div>
-        <button type="submit" class="btn btn-success col-lg-10 mx-auto p-2 my-5 p-4">CREATE ACCOUNT</button>
+        <button type="submit form-validation" class="btn btn-success col-lg-10 mx-auto p-2 my-5 p-4">CREATE ACCOUNT</button>
       </form>
 
   </main>

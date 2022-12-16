@@ -47,15 +47,12 @@
   <main>
     <div class="container">
       <h1 class="">Login page</h1>
-      <form id="loginForm" class="row g-3 mt-5" action="/profile.html">
-        <!-- <div class="col-md-12 col-lg-10 mx-auto my-4">
-          <input type="text" name="name" title="User name must only contain lower case and Upper case characters, numbers and underscore: _ Example: YourNAME_8899" class="form-control p-4" id="userName" placeholder="Full Name or User Name" required>
-        </div> -->
+      <form id="loginForm" class="row g-3 mt-5">
         <div class="col-md-12 col-lg-10 mx-auto my-4">
-          <input type="password" name="password" minlength=8 class="form-control p-4" id="password" placeholder="Your password" required>
+          <input type="email" name="email" title="The account does not exist" class="form-control p-4" id="eMail" placeholder="Your E-mail" required>
         </div>
         <div class="col-md-12 col-lg-10 mx-auto my-4">
-          <input type="email" name="email" pattern="^[\w\-.]+@(stud.)?noroff.no$" title="It is only allowed for users tha have a stud.noroff.no or noroff.no account to register. Example: my_name8899@stud.noroff.no/noroff.no" class="form-control p-4" id="eMail" placeholder="Your E-mail" required>
+          <input type="password" name="password" minlength=8 class="form-control p-4" id="password" placeholder="Your password" required>
         </div>
         <button type="button form-validation" class="btn btn-primary col-lg-10 mx-auto my-5 p-4">LOG IN</button>
         <a href="/register.html" class=" btn btn-danger col-lg-10 mx-auto my-5 p-4"><button type="button" class="btn">CREATE NEW ACCOUNT</button></a>

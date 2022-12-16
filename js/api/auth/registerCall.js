@@ -15,7 +15,7 @@ const method = "post";
  * registerNewUser(registerURL, profile)
  * ```
  */
-export async function registerNewUser(registerURL, profile) {
+export async function registerNewUser(profile) {
   try {
 
     const body = JSON.stringify(profile);
@@ -26,16 +26,13 @@ export async function registerNewUser(registerURL, profile) {
       },
       method,
       body
-    })
-    if (response.ok) {
-      alert("Success! Your account is registered!")
-    }
+    });
     
 
     const result = await response.json();
     console.log(result);
 
   } catch (error) {
-    alert(error, "The register account API call failed");
+    (error, "The register-account API call failed");
   }
 }

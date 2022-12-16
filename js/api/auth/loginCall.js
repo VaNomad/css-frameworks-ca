@@ -5,7 +5,7 @@ import {
 const loginURL = `${API_SOCIAL_URL}/auth/login`;
 console.log(loginURL);
 
-const method = "post";
+const method = "POST";
 
 export async function loginUser(login) {
   try {
