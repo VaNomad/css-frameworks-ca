@@ -11046,6 +11046,11 @@ body {
   color: #fff;
 }
 
+.form-control::placeholder {
+  color: grey;
+  opacity: 70%;
+}
+
 .navbar-brand img {
   width: 150px;
 }
