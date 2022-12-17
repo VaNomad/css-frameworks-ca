@@ -39,7 +39,7 @@ export async function registerNewUser(profile) {
     };
 
   } catch (error) {
-    (error, "The register-account API call failed");
+    console.log(error, "The register-account API call failed");
   }
 
   
