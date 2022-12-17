@@ -32,7 +32,15 @@ export async function registerNewUser(profile) {
     const result = await response.json();
     console.log(result);
 
+    if (result.id) {
+      alert("Your account is registered");
+    } else {
+      alert(error);
+    };
+
   } catch (error) {
     (error, "The register-account API call failed");
   }
+
+  
 }

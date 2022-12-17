@@ -10,7 +10,7 @@ const method = "POST";
 export async function loginUser(login) {
   try {
     const body = JSON.stringify(login);
-    
+
     const response = await fetch(loginURL, {
       headers: {
         "Content-Type": "application/json"
@@ -21,13 +21,13 @@ export async function loginUser(login) {
     console.log(response);
 
     const json = await response.json();
+
     console.log(json);
 
   } catch (error) {
-    console.log("The login API call failed");
+    console.log("The User name or password in incorrect");
     console.log(error);
+    console.log('hello');
     
   }
 }
-
-
