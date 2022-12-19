@@ -22,7 +22,7 @@ export async function loginUser(login) {
     const json = await response.json();
     const accessToken = json.accessToken;
     localStorage.setItem("accessToken", accessToken);
-
+    return response
 
   } catch (error) {
     console.log("The User name or password in incorrect");

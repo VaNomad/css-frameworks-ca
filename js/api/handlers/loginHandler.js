@@ -11,12 +11,15 @@ export function loginFormListener() {
     const form = event.target;
     const formData = new FormData(form);
     const login = Object.fromEntries(formData.entries());
-    loginUser(login);
+    const response = await loginUser();
+    console.log(response);
+    
+    // loginUser(login);
 
     try {
       await loginUser(login);
-      if (login.accesstoken.ok) {
-        window.location = "/profile.html"
+      if (response.ok) {
+        window.location.replace("/profile.html")
       }
     } catch (error) {
       displayError(loginForm, error);
