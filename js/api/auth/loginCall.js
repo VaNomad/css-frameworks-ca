@@ -18,16 +18,28 @@ export async function loginUser(login) {
       method,
       body
     });
+
     console.log(response);
-
     const json = await response.json();
-
     console.log(json);
+    const accessToken = json.accessToken;
+    localStorage.setItem("acessToken", accessToken);
+
 
   } catch (error) {
     console.log("The User name or password in incorrect");
     console.log(error);
     console.log('hello');
+
+  }
+}
+
+//----------------- Request with Token
+function getWithToken(url) {
+  try {
+    
+  } catch (error) {
+    console.log("error", error);
     
   }
 }

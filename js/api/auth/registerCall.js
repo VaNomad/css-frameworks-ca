@@ -27,6 +27,9 @@ export async function registerNewUser(profile) {
     body
   });
 
+  console.log(response);
+  
+
   // if (response.ok) {
   //   return await response.json();
   // }
