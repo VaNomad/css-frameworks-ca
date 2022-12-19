@@ -10,6 +10,6 @@ export function getTokenListener() {
       const getToken = Object.fromEntries(formData.entries());
       console.log(getToken);
 
-      getPosts(getToken);
+      getPosts();
   });
 };
