@@ -2,13 +2,13 @@ import {
   API_SOCIAL_URL
 } from "../../constants.js";
 
-const postURL = `${API_SOCIAL_URL}/posts`;
+const url= `${API_SOCIAL_URL}/posts`;
 
 const method = "GET";
 
-export async function getPosts(postURL) {
+export async function getPosts() {
   try {
-    console.log(postURL);
+    console.log(url);
     const token = localStorage.getItem("accessToken");
     console.log(token);
 
@@ -19,7 +19,7 @@ export async function getPosts(postURL) {
       },
       method,
     };
-    const response = await fetch(postURL, getOptions);
+    const response = await fetch(url, getOptions);
     console.log(response);
     
     const json = await response.json();
