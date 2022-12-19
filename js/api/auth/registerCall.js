@@ -17,7 +17,6 @@ const method = "post";
  */
 export async function registerNewUser(profile) {
 
-
   const body = JSON.stringify(profile);
 
   const response = await fetch(registerURL, {

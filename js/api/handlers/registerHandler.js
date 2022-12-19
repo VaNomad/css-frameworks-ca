@@ -2,6 +2,7 @@
 // import { API_BASE_URL } from "./constants.mjs";
 
 import { registerNewUser } from "../auth/registerCall.js";
+import { displayError } from "../../ui/displayError.js";
 
 // export async function register(url, profile, method) {
     
@@ -32,13 +33,11 @@ import { registerNewUser } from "../auth/registerCall.js";
 
         try {
             await registerNewUser(profile);
+            if (profile.id.ok) {
+                window.location = "/login.html"  
+            } 
         } catch (error) {
-            const div = document.createElement("div");
-            div.innerHTML = error;
-            registryForm.prepend(div);
-            console.log(error);
-            
-            
+            displayError(registryForm, error);
         }
         
     });
