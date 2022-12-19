@@ -11,8 +11,6 @@ export function loginFormListener() {
     const form = event.target;
     const formData = new FormData(form);
     const login = Object.fromEntries(formData.entries());
-    console.log(login);
-
     loginUser(login);
 
     try {

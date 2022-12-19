@@ -3,7 +3,6 @@ import {
 } from "../../constants.js";
 
 export const registerURL = `${API_SOCIAL_URL}/auth/register`;
-console.log(registerURL);
 
 const method = "post";
 
@@ -30,13 +29,13 @@ export async function registerNewUser(profile) {
   console.log(response);
   
 
-  // if (response.ok) {
-  //   return await response.json();
-  // }
+  if (response.ok) {
+    return await response.json();
+  }
 
 
-  const error = await response.json();
-  console.log(error);
+  // const error = await response.json();
+  // console.log(error);
   
   const errorMessage = error.errors[0].message;
   console.log("error", error);

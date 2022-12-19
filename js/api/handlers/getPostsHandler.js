@@ -1,4 +1,4 @@
-import { getToken } from "../auth/getTokenCall.js";
+import { getPosts } from "../auth/getPostsCall.js";
 
 export function getTokenListener() {
   const loginForm = document.querySelector("#loginForm");
@@ -7,9 +7,9 @@ export function getTokenListener() {
       event.preventDefault();
       const form = event.target;
       const formData = new FormData(form);
-      const getTheToken = Object.fromEntries(formData.entries());
-      console.log(getTheToken);
+      const getToken = Object.fromEntries(formData.entries());
+      console.log(getToken);
 
-      getToken(getTheToken);
+      getPosts(getToken);
   });
 };

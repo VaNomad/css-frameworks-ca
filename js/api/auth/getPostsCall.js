@@ -3,13 +3,12 @@ import {
 } from "../../constants.js";
 
 const postURL = `${API_SOCIAL_URL}/posts`;
-console.log(postURL);
 
 const method = "GET";
 
-export async function getToken(postURL) {
+export async function getPosts(url) {
   try {
-    console.log(postURL);
+    console.log(url);
     const token = localStorage.getItem("accessToken");
     console.log(token);
 

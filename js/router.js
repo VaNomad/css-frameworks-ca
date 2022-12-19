@@ -1,11 +1,10 @@
 import { registerFormListener } from "./api/handlers/registerHandler.js";
 import { loginFormListener } from "./api/handlers/loginHandler.js";
-import { getTokenListener } from "./api/handlers/getTokenHandler.js";
+import { getTokenListener } from "./api/handlers/getPostsHandler.js";
 
 
 export function router() {
   const path = window.location.pathname;
-  console.log(path);
   
   switch (path) {
     case "/":
