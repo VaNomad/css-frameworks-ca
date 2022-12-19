@@ -23,15 +23,24 @@ import { registerNewUser } from "../auth/registerCall.js";
  export function registerFormListener() {
     const registryForm = document.querySelector("#registerForm");
 
-    registryForm.addEventListener("submit", (event) => {
+    registryForm.addEventListener("submit", async (event) => {
         event.preventDefault();
         const form = event.target;
         const formData = new FormData(form);
         const profile = Object.fromEntries(formData.entries());
         console.log(profile);
 
-        //send to API
-        registerNewUser(profile);
+        try {
+            await registerNewUser(profile);
+        } catch (error) {
+            const div = document.createElement("div");
+            div.innerHTML = error;
+            registryForm.prepend(div);
+            console.log(error);
+            
+            
+        }
+        
     });
 };
 

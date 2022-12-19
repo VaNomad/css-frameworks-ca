@@ -16,31 +16,32 @@ const method = "post";
  * ```
  */
 export async function registerNewUser(profile) {
-  try {
 
-    const body = JSON.stringify(profile);
 
-    const response = await fetch(registerURL, {
-      headers: {
-        "Content-Type": "application/json"
-      },
-      method,
-      body
-    });
-    
+  const body = JSON.stringify(profile);
 
-    const result = await response.json();
-    console.log(result);
+  const response = await fetch(registerURL, {
+    headers: {
+      "Content-Type": "application/json"
+    },
+    method,
+    body
+  });
 
-    if (result.id) {
-      alert("Your account is registered");
-    } else {
-      alert(error);
-    };
+  // if (response.ok) {
+  //   return await response.json();
+  // }
 
-  } catch (error) {
-    console.log(error, "The register-account API call failed");
-  }
 
+  const error = await response.json();
+  console.log(error);
   
+  const errorMessage = error.errors[0].message;
+  console.log("error", error);
+
+  throw new Error(errorMessage);
+
 }
+
+
+
