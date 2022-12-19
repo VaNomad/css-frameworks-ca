@@ -11,9 +11,6 @@ export function loginFormListener() {
     const form = event.target;
     const formData = new FormData(form);
     const login = Object.fromEntries(formData.entries());
-    const response = await loginUser();
-    console.log(response);
-    
     // loginUser(login);
 
     try {
