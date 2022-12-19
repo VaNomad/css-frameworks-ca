@@ -1,5 +1,6 @@
 import { registerFormListener } from "./api/handlers/registerHandler.js";
 import { loginFormListener } from "./api/handlers/loginHandler.js";
+import { getTokenListener } from "./api/handlers/getTokenHandler.js";
 
 
 export function router() {
@@ -18,6 +19,8 @@ export function router() {
     case "/login.html":
       console.log("login");
       loginFormListener();
+      getTokenListener();
+      return;
   }
 }
 

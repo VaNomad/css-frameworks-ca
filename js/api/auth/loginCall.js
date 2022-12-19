@@ -34,12 +34,3 @@ export async function loginUser(login) {
   }
 }
 
-//----------------- Request with Token
-function getWithToken(url) {
-  try {
-    
-  } catch (error) {
-    console.log("error", error);
-    
-  }
-}
