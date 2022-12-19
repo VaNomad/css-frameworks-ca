@@ -14,9 +14,10 @@ export function loginFormListener() {
     // loginUser(login);
 
     try {
-      await loginUser(login);
+      const response = await loginUser(login);
       if (response.ok) {
-        window.location.replace("/profile.html")
+        window.location.replace("/profile.html");
+        return response
       }
     } catch (error) {
       displayError(loginForm, error);
