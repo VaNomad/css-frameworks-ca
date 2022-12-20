@@ -1,6 +1,6 @@
 import {
   API_SOCIAL_URL
-} from "../../constants.js";
+} from "../../constants.js"
 
 const url= `${API_SOCIAL_URL}/posts`;
 
@@ -31,4 +31,9 @@ export async function getPosts() {
 
   }
 }
+
+export async function getPost(id) {
+
+}
+
 

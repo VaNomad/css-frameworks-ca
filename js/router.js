@@ -1,6 +1,9 @@
 import { registerFormListener } from "./api/handlers/registerHandler.js";
 import { loginFormListener } from "./api/handlers/loginHandler.js";
 import { getTokenListener } from "./api/handlers/getPostsHandler.js";
+import { createPost } from "./api/posts/createPosts.js";
+// import * as posts from "./api/posts/index.js";
+
 
 
 export function router() {
@@ -23,3 +26,12 @@ export function router() {
   }
 }
 
+// posts.createPost();
+// posts.getPost();
+// posts.removePost();
+// posts.updatePost();
+
+createPost({
+  title: "Example Post",
+  body: "Also an Example"
+})

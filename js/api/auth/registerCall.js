@@ -35,6 +35,8 @@ export async function registerNewUser(profile) {
 
   const error = await response.json();
   console.log(error);
+
+  
   
   const errorMessage = error.errors[0].message;
   console.log("error", error);
