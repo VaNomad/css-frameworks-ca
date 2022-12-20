@@ -27,7 +27,7 @@ export async function getPosts() {
 
 
   } catch (error) {
-    console.log(error);
+    console.log("The getPosts API call failed: ", error);
 
   }
 }

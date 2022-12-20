@@ -3,7 +3,6 @@ import {
 } from "../../constants.js";
 
 const loginURL = `${API_SOCIAL_URL}/auth/login`;
-
 const method = "POST";
 
 export async function loginUser(login) {
@@ -18,10 +17,13 @@ export async function loginUser(login) {
       body
     });
 
-    console.log(response);
+    
     const json = await response.json();
     const accessToken = json.accessToken;
     localStorage.setItem("accessToken", accessToken);
+    console.log(response);
+    console.log(accessToken);
+    
     return response
 
   } catch (error) {
