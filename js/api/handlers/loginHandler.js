@@ -15,6 +15,8 @@ export function loginFormListener() {
 
     try {
       const response = await loginUser(login);
+      console.log(response);
+      
       if (response.ok) {
         window.location.replace("/profile.html");
         return response

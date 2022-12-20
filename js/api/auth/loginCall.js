@@ -1,6 +1,5 @@
-import {
-  API_SOCIAL_URL
-} from "../../constants.js";
+import { API_SOCIAL_URL } from "../../constants.js";
+import * as storage from "../../storage/storage.js";
 
 const loginURL = `${API_SOCIAL_URL}/auth/login`;
 const method = "POST";
@@ -17,13 +16,12 @@ export async function loginUser(login) {
       body
     });
 
-    
-    const json = await response.json();
-    const accessToken = json.accessToken;
-    localStorage.setItem("accessToken", accessToken);
-    console.log(response);
-    console.log(accessToken);
-    
+    const { accessToken, ...profile } = await response.json();
+
+    storage.save("accessToken", accessToken);
+
+    storage.save("profile", profile)
+  
     return response
 
   } catch (error) {
