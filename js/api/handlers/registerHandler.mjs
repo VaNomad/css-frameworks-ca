@@ -1,8 +1,8 @@
 
 // import { API_BASE_URL } from "./constants.mjs";
 
-import { registerNewUser } from "../auth/registerCall.js";
-import { displayError } from "../../ui/displayError.js";
+import { registerNewUser } from "../auth/registerCall.mjs";
+import { displayError } from "../../ui/displayError.mjs";
 
 // export async function register(url, profile, method) {
     

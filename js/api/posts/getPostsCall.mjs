@@ -1,8 +1,8 @@
 import {
   API_SOCIAL_URL
-} from "../../constants.js"
+} from "../../constants.mjs"
 
-const url= `${API_SOCIAL_URL}/posts`;
+const url = `${API_SOCIAL_URL}/posts`;
 
 const method = "GET";
 
@@ -21,7 +21,7 @@ export async function getPosts() {
     };
     const response = await fetch(url, getOptions);
     console.log(response);
-    
+
     const json = await response.json();
     console.log(json);
 
@@ -35,5 +35,3 @@ export async function getPosts() {
 export async function getPost(id) {
 
 }
-
-

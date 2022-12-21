@@ -1,6 +1,6 @@
 import {
   API_SOCIAL_URL
-} from "../../constants.js";
+} from "../../constants.mjs";
 
 export const registerURL = `${API_SOCIAL_URL}/auth/register`;
 
@@ -27,7 +27,7 @@ export async function registerNewUser(profile) {
   });
 
   console.log(response);
-  
+
 
   if (response.ok) {
     return await response.json();
@@ -36,14 +36,11 @@ export async function registerNewUser(profile) {
   const error = await response.json();
   console.log(error);
 
-  
-  
+
+
   const errorMessage = error.errors[0].message;
   console.log("error", error);
 
   throw new Error(errorMessage);
 
 }
-
-
-

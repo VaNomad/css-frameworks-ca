@@ -1,7 +1,7 @@
 import {
   loginUser
-} from "../auth/loginCall.js";
-import { displayError } from "../../ui/displayError.js";
+} from "../auth/loginCall.mjs";
+import { displayError } from "../../ui/displayError.mjs";
 
 export function loginFormListener() {
   const loginForm = document.querySelector("#loginForm");

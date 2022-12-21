@@ -1,6 +1,6 @@
 import {
   getPosts
-} from "../posts/getPostsCall.js";
+} from "../posts/getPostsCall.mjs";
 
 export function getTokenListener() {
   const loginForm = document.querySelector("#loginForm");
