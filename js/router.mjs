@@ -2,6 +2,7 @@ import { registerFormListener } from "./api/handlers/registerHandler.mjs";
 import { loginFormListener } from "./api/handlers/loginHandler.mjs";
 import { getTokenListener } from "./api/handlers/getPostsHandler.mjs";
 import { createPost } from "./api/posts/createPosts.mjs";
+import { updatePost } from "./api/posts/updatePosts.mjs"
 // import * as posts from "./api/posts/index.mjs";
 
 
@@ -35,3 +36,10 @@ createPost({
   title: "Example Post",
   body: "Also an Example"
 })
+
+updatePost({
+  id: 1868,
+  title: "UPDATED Example Post",
+  body: "UPDATED Also an Example"
+})
+

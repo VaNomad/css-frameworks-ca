@@ -1,9 +1,5 @@
-import {
-  API_SOCIAL_URL
-} from "../../constants.mjs";
-import {
-  authFetch
-} from "../authFetch.mjs";
+import { API_SOCIAL_URL } from "../../constants.mjs";
+import { authFetch } from "../authFetch.mjs";
 
 const createPostsURL = `${API_SOCIAL_URL}/posts`;
 const method = "post";
@@ -15,7 +11,7 @@ export async function createPost(postData) {
     body: JSON.stringify(postData)
   })
 
-  const result = await response.json();
-  console.log(result);
-
+  // const result = await response.json();
+  // console.log(result);
+  return await response.json();
 }
