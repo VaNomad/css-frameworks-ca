@@ -1,10 +1,10 @@
 import { load } from "../storage/storage.mjs";
 
-export async function headers() {
-  const token = load("token");
+export function headers() {
+  const token = load("accessToken");
 
   return {
-    "content-Type": "application/json",
+    "Content-Type": "application/json",
     "Authorization": `Bearer ${token}`
   }
 }

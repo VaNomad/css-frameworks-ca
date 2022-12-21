@@ -6,14 +6,15 @@ import {
 } from "../authFetch.mjs";
 
 const createPostsURL = `${API_SOCIAL_URL}/posts`;
-const method = "POST";
+const method = "post";
 
 export async function createPost(postData) {
 
   const response = await authFetch(createPostsURL, {
-    body: JSON.stringify(postData),
-    method
-  });
+    method,
+    body: JSON.stringify(postData)
+  })
+
   const result = await response.json();
   console.log(result);
 
