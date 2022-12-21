@@ -1,37 +1,39 @@
-import {
-  API_SOCIAL_URL
-} from "../../constants.mjs"
+// import {
+//   API_SOCIAL_URL
+// } from "../../constants.mjs"
 
-const url = `${API_SOCIAL_URL}/posts`;
+// const url = `${API_SOCIAL_URL}/posts`;
 
-const method = "GET";
+
+
+import { API_SOCIAL_URL } from "../../constants.mjs";
+
+import { authFetch } from "../authFetch.mjs";
+
+
+// const method = "delete";
 
 export async function getPosts() {
-  try {
-    console.log(url);
-    const token = localStorage.getItem("accessToken");
-    console.log(token);
+  // if (!id) {
+  //   throw new Error("You will need an ID to delete it!")
+  // }
 
-    const getOptions = {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`
-      },
-      method,
-    };
-    const response = await fetch(url, getOptions);
-    console.log(response);
+  const getPostsURL = `${API_SOCIAL_URL}/posts`;
+  
+  const response = await authFetch(getPostsURL)
 
-    const json = await response.json();
-    console.log(json);
-
-
-  } catch (error) {
-    console.log("The getPosts API call failed: ", error);
-
-  }
+  return await response.json();
 }
 
 export async function getPost(id) {
+  if (!id) {
+    throw new Error("You will need an ID to get the post!")
+  }
 
+  const getPostURL = `${API_SOCIAL_URL}/posts/${id}`;
+  
+  const response = await authFetch(getPostURL)
+
+  return await response.json();
 }
+

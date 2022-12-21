@@ -1,9 +1,10 @@
 import { registerFormListener } from "./api/handlers/registerHandler.mjs";
 import { loginFormListener } from "./api/handlers/loginHandler.mjs";
 import { getTokenListener } from "./api/handlers/getPostsHandler.mjs";
-import { createPost } from "./api/posts/createPosts.mjs";
-import { updatePost } from "./api/posts/updatePosts.mjs"
-// import * as posts from "./api/posts/index.mjs";
+// import { createPost } from "./api/posts/createPosts.mjs";
+// import { updatePost } from "./api/posts/updatePosts.mjs"
+// import { removePost } from "./api/posts/removePosts.mjs";
+import * as posts from "./api/posts/index.mjs";
 
 
 
@@ -28,18 +29,23 @@ export function router() {
 }
 
 // posts.createPost();
-// posts.getPost();
-// posts.removePost();
 // posts.updatePost();
+// posts.removePost();
+// posts.getPost();
+posts.getPosts().then(console.log);
 
-createPost({
-  title: "Example Post",
-  body: "Also an Example"
-})
+posts.getPost(1897).then(console.log);
 
-updatePost({
-  id: 1868,
-  title: "UPDATED Example Post",
-  body: "UPDATED Also an Example"
-})
+// createPost({
+//   title: "Example Post",
+//   body: "Also an Example"
+// });
+
+// updatePost({
+//   id: 1868,
+//   title: "UPDATED Example Post",
+//   body: "UPDATED Also an Example"
+// });
+
+// removePost(1868);
 
