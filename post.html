@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/dist/css/styles.css">
+  <script src="https://kit.fontawesome.com/fbce6b241f.js" crossorigin="anonymous"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer type="module"></script>
+  <script src="/js/index.mjs" defer type="module"></script>
+  <title>DEMO TAPE | Home Page</title>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar fixed-top navbar-expand-xl bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand col-2" href="/index.html"><img src="/assets/icons/logo.png" class="logo-img m-3"
+            alt=""><span class="logo-text">DEMO TAPE</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse ml-4">
+          <ul class="navbar-nav me-auto mb-lg-2">
+            <li class="nav-item fs-5 m-4">
+              <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item fs-5 m-4">
+              <a class="nav-link" href="/profile.html">Profile</a>
+            </li>
+            <li class="nav-item fs-5 m-4">
+              <a class="nav-link" href="/login.html">Login</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success text-black" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Write New Message -->
+    <div class="container" id="newPost">
+      <div class="row d-flex justify-content-center align-items-center mb-5">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8 new-message">
+          <h2 class="mb-5 fs-4">Write New Message:</h2>
+          <form>
+            <div class="border bg-primary rounded-pill p-4">
+              <div class="d-flex p-2">
+                <div class="col-4">
+                  <i class="fa-solid fa-user-plus m-2"></i>  
+                </div>
+                <div class="p-3 d-flex">
+                  <textarea class="form-control" id="textarea" rows="2" cols="60" placeholder="write new message here..."></textarea>
+                </div>
+                <div class="col-2 d-flex align-items-center justify-content-center">
+                  <a href="" class="border rounded-pill p-4 shadow" style="color: black; font-size: 30px;"><i class="fa-solid fa-plus"></i></a>
+                </div>
+                <button type="submit" class="btn" style="font-size: 30px;"><i class="fa-solid fa-paper-plane"></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- footer -->
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Profile</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Login</a></li>
+      </ul>
+      <p class="text-center text-muted">© 2022 Demo Tape, Inc</p>
+    </footer>
+  </div>
+</body>
+
+</html>

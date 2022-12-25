@@ -4,13 +4,15 @@ import { getTokenListener } from "./api/handlers/getPostsHandler.mjs";
 // import { createPost } from "./api/posts/createPosts.mjs";
 // import { updatePost } from "./api/posts/updatePosts.mjs"
 // import { removePost } from "./api/posts/removePosts.mjs";
-import * as posts from "./api/posts/index.mjs";
+import * as postMethods from "./api/posts/postBarrel.mjs";
+import { renderPostTemplates } from "./api/posts/postTemplate.mjs";
+
 
 
 
 export function router() {
   const path = window.location.pathname;
-  
+
   switch (path) {
     case "/":
     case "/index.html":
@@ -32,9 +34,21 @@ export function router() {
 // posts.updatePost();
 // posts.removePost();
 // posts.getPost();
-posts.getPosts().then(console.log);
+// postMethods.getPosts().then(console.log);
+// posts.removePost(1905);
 
-posts.getPost(1897).then(console.log);
+
+async function testTemplate() {
+  const posts = await postMethods.getPosts();
+  // const post = posts[45];
+
+  const container = document.querySelector("#newPost");
+  // renderPostTemplate(post, container)
+  renderPostTemplates(posts, container)
+}
+
+testTemplate();
+
 
 // createPost({
 //   title: "Example Post",
@@ -48,4 +62,3 @@ posts.getPost(1897).then(console.log);
 // });
 
 // removePost(1868);
-
