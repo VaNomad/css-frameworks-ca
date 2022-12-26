@@ -9,11 +9,10 @@
   <script src="https://kit.fontawesome.com/fbce6b241f.js" crossorigin="anonymous"></script>
   <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer type="module"></script>
   <script src="/js/index.mjs" defer type="module"></script>
-  <title>DEMO TAPE | Post page</title>
+  <title>DEMO TAPE | Login Page</title>
 </head>
 
 <body>
-  <!-- Navigation -->
   <header>
     <nav class="navbar fixed-top navbar-expand-xl bg-light">
       <div class="container-fluid">
@@ -23,10 +22,10 @@
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse ml-4">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-lg-2">
             <li class="nav-item fs-5 m-4">
-              <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="/index.html">Home</a>
             </li>
             <li class="nav-item fs-5 m-4">
               <a class="nav-link" href="/profile.html">Profile</a>
@@ -48,44 +47,40 @@
   </header>
 
   <main>
+    <div class="container">
+      <h1 class="">Edit Post</h1>
 
-    <!-- Write New Message -->
-    <div class="container" id="newPost">
-      <div class="row d-flex justify-content-center align-items-center mb-5">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8 new-message">
-          <h2 class="mb-5 fs-4">Write New Message:</h2>
-          <form>
-            <div class="border bg-primary rounded-pill p-4">
-              <div class="d-flex p-2">
-                <div class="col-4">
-                  <i class="fa-solid fa-user-plus m-2"></i>  
-                </div>
-                <div class="p-3 d-flex">
-                  <textarea class="form-control" id="textarea" rows="2" cols="60" placeholder="write new message here..."></textarea>
-                </div>
-                <div class="col-2 d-flex align-items-center justify-content-center">
-                  <a href="" class="border rounded-pill p-4 shadow" style="color: black; font-size: 30px;"><i class="fa-solid fa-plus"></i></a>
-                </div>
-                <button type="submit" class="btn" style="font-size: 30px;"><i class="fa-solid fa-paper-plane"></i></button>
-              </div>
-            </div>
-          </form>
+      <form id="editPost" class="row g-3 mt-5">
+        <div class="col-md-12 col-lg-10 mx-auto my-4">
+          <input type="text" name="title" pattern="^[\w]+$" maxlength="50" title="Title must be under 50 characters" class="form-control p-4" id="title" placeholder="Title" required>
         </div>
-      </div>
-    </div>
+        <div class="col-md-12 col-lg-10 mx-auto my-4">
+          <input type="file" name="media" title="Only jpg or png allowed!" class="form-control p-4" id="" placeholder="Upload image" required>
+          <input type="submit" class="btn btn-success col-lg-10 mx-auto p-2 my-5 p-4" placeholder="Upload file">
+          <button type="submit form-validation" class="btn btn-success col-lg-10 mx-auto p-2 my-5 p-4">UPLOAD FILE</button>
+        </div>
+        <div class="col-md-12 col-lg-10 mx-auto my-4">
+          <textarea name="body" id="textArea" cols="50" rows="5" placeholder="Write your post here!"></textarea>
+        </div>
+        <div class="col-md-12 col-lg-10 mx-auto my-4">
+          <textarea id="tags" cols="50" rows="2" placeholder="Write post tags here!"></textarea>
+          <input type="button" hidden class="form-control p-4" value="No of words" onkeyup="wordCount();">
+          <div class="col-md-12 col-lg-10 my-2">
+            <input type="text" id="words" placeholder="No. of tags: " size="8">
+          </div>
+        </div>
+      </form>
 
   </main>
 
-  <!-- footer -->
-  <div class="container">
-    <footer class="py-3 my-4">
-      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Profile</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Login</a></li>
-      </ul>
-      <p class="text-center text-muted">© 2022 Demo Tape, Inc</p>
-    </footer>
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">© 2017–2022 DEMO TAPE</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Privacy</a></li>
+      <li class="list-inline-item"><a href="#">Terms</a></li>
+      <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+  </footer>
   </div>
 </body>
 

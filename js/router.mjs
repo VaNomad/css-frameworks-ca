@@ -40,7 +40,7 @@ export function router() {
 
 async function testTemplate() {
   const posts = await postMethods.getPosts();
-  // const post = posts[45];
+  // const post = posts[35];
 
   const container = document.querySelector("#newPost");
   // renderPostTemplate(post, container)
