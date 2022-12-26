@@ -408,7 +408,12 @@ button:not(:disabled),
 }
 
 textarea {
-  resize: vertical;
+  resize: none;
+  padding: 1rem;
+}
+
+textarea::placeholder {
+  color: grey;
 }
 
 fieldset {

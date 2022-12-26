@@ -52,22 +52,23 @@
 
       <form id="editPost" class="row g-3 mt-5">
         <div class="col-md-12 col-lg-10 mx-auto my-4">
-          <input type="text" name="title" pattern="^[\w]+$" maxlength="50" title="Title must be under 50 characters" class="form-control p-4" id="title" placeholder="Title" required>
+          <input type="text" name="title" maxlength="50" title="Title must be under 50 characters" class="form-control p-4" id="title" placeholder="Title" required>
         </div>
         <div class="col-md-12 col-lg-10 mx-auto my-4">
-          <input type="file" name="media" title="Only jpg or png allowed!" class="form-control p-4" id="" placeholder="Upload image" required>
-          <input type="submit" class="btn btn-success col-lg-10 mx-auto p-2 my-5 p-4" placeholder="Upload file">
-          <button type="submit form-validation" class="btn btn-success col-lg-10 mx-auto p-2 my-5 p-4">UPLOAD FILE</button>
+          <input type="url" name="media" class="form-control p-4" id="" placeholder="Media link" required>
+          <!-- <input type="submit" class="btn btn-success col-lg-10 mx-auto p-2 my-5 p-4" placeholder="Upload file">
+          <button type="submit form-validation" class="btn btn-success col-lg-10 mx-auto p-2 my-5 p-4">UPLOAD FILE</button> -->
         </div>
         <div class="col-md-12 col-lg-10 mx-auto my-4">
-          <textarea name="body" id="textArea" cols="50" rows="5" placeholder="Write your post here!"></textarea>
+          <textarea name="body" id="textArea" cols="58" rows="5" placeholder="Write your post here.."></textarea>
         </div>
         <div class="col-md-12 col-lg-10 mx-auto my-4">
-          <textarea id="tags" cols="50" rows="2" placeholder="Write post tags here!"></textarea>
+          <textarea id="tags" cols="58" rows="2" placeholder="Write post tags here"></textarea>
           <input type="button" hidden class="form-control p-4" value="No of words" onkeyup="wordCount();">
           <div class="col-md-12 col-lg-10 my-2">
-            <input type="text" id="words" placeholder="No. of tags: " size="8">
+            <input type="text" class="p-4" id="words" placeholder="No. of tags: 50/ " size="10">
           </div>
+          <button class="btn btn-success col-lg-10 mx-auto p-2 my-5 p-4">Update Post</button>
         </div>
       </form>
 
