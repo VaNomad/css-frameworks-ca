@@ -5,8 +5,12 @@ export function editPostListener() {
   const editPostForm = document.querySelector("#editPost");
 
   const url = new URL(location.href);
+  
   const id = url.searchParams.get("id");
+  
+  
   // form.id.value = id;
+  
 
   editPostForm.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -14,6 +18,7 @@ export function editPostListener() {
     const formData = new FormData(form);
     const edit = Object.fromEntries(formData.entries());
     post.id = id;
+    
     // loginUser(login);
 
     try {

@@ -1,12 +1,13 @@
-import { registerFormListener } from "./api/handlers/registerHandler.mjs";
-import { loginFormListener } from "./api/handlers/loginHandler.mjs";
-import { getTokenListener } from "./api/handlers/getPostsHandler.mjs";
-import { createPostListener } from "./api/handlers/createPostHandler.mjs";
-// import { createPost } from "./api/posts/createPosts.mjs";
+// import { registerFormListener } from "./api/handlers/registerHandler.mjs";
+// import { loginFormListener } from "./api/handlers/loginHandler.mjs";
+// import { getTokenListener } from "./api/handlers/getPostsHandler.mjs";
+// import { createPostListener } from "./api/handlers/createPostHandler.mjs";
+// // import { createPost } from "./api/posts/createPosts.mjs";
 // import { updatePost } from "./api/posts/updatePosts.mjs"
 // import { removePost } from "./api/posts/removePosts.mjs";
 import * as postMethods from "./api/posts/postBarrel.mjs";
-import { renderPostTemplates } from "./api/posts/postTemplate.mjs";
+import * as listeners from "./api/handlers/HandlersBarrel.mjs"
+// import { renderPostTemplates } from "./api/posts/postTemplate.mjs";
 // import { renderPostTemplate } from "./api/posts/postTemplate.mjs";
 
 
@@ -22,16 +23,20 @@ export function router() {
       return;
     case "/register.html":
       console.log("register");
-      registerFormListener();
+      listeners.registerFormListener();
       return;
     case "/login.html":
       console.log("login");
-      loginFormListener();
-      getTokenListener();
+      listeners.loginFormListener();
+      listeners.getTokenListener();
       return;
     case "/createPost.html":
       console.log("createPost");
-      createPostListener();
+      listeners.createPostListener();
+      return;
+    case "/editPost.html":
+      console.log("editPost");
+      listeners.editPostListener();
       return;
   }
 }
@@ -44,12 +49,13 @@ export function router() {
 // posts.removePost(1905);
 
 
-async function testTemplate() {
-  const posts = await postMethods.getPosts();
-  // const post = posts.pop();
-  const container = document.querySelector("#newPost");
-  // renderPostTemplate(post, container);
-  renderPostTemplates(posts, container)
-}
+// async function testTemplate() {
+//   const posts = await postMethods.getPosts();
+//   // const post = posts.pop();
+//   // const post = posts[1];
+//   const container = document.querySelector("#newPost");
+//   // renderPostTemplate(post, container);
+//   renderPostTemplates(posts, container)
+// }
 
-testTemplate();
+// testTemplate();
