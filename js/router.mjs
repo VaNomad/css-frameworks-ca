@@ -7,6 +7,7 @@ import { createPostListener } from "./api/handlers/createPostHandler.mjs";
 // import { removePost } from "./api/posts/removePosts.mjs";
 import * as postMethods from "./api/posts/postBarrel.mjs";
 import { renderPostTemplates } from "./api/posts/postTemplate.mjs";
+// import { renderPostTemplate } from "./api/posts/postTemplate.mjs";
 
 
 
@@ -45,25 +46,10 @@ export function router() {
 
 async function testTemplate() {
   const posts = await postMethods.getPosts();
-  // const post = posts[35];
-
+  // const post = posts.pop();
   const container = document.querySelector("#newPost");
-  // renderPostTemplate(post, container)
+  // renderPostTemplate(post, container);
   renderPostTemplates(posts, container)
 }
 
 testTemplate();
-
-
-// createPost({
-//   title: "Example Post",
-//   body: "Also an Example"
-// });
-
-// updatePost({
-//   id: 1868,
-//   title: "UPDATED Example Post",
-//   body: "UPDATED Also an Example"
-// });
-
-// removePost(1868);

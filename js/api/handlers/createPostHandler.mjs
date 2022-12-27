@@ -9,7 +9,7 @@ export function createPostListener() {
     const form = event.target;
     const formData = new FormData(form);
     const post = Object.fromEntries(formData.entries());
-    // loginUser(login);
+    // createPost(post)
 
     try {
       const response = await createPost(post);
