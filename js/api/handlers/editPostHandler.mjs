@@ -17,7 +17,7 @@ export function editPostListener() {
     const form = event.target;
     const formData = new FormData(form);
     const edit = Object.fromEntries(formData.entries());
-    post.id = id;
+    edit.id = id;
     
     // loginUser(login);
 
