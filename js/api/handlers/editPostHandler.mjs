@@ -1,7 +1,8 @@
 import { editPost } from "../posts/editPost.mjs";
 import { displayError } from "../../ui/displayError.mjs";
+import { getPost } from "../posts/getPostsCall.mjs";
 
-export function editPostListener() {
+export async function editPostListener() {
   const editPostForm = document.querySelector("#editPost");
 
   const url = new URL(location.href);
@@ -9,7 +10,21 @@ export function editPostListener() {
   const id = url.searchParams.get("id");
   
   
-  // form.id.value = id;
+
+  //testing code for pre-fill of editing a post
+
+  const post = await getPost(id);
+
+  const btn = document.querySelector("#editBtn");
+  
+  btn.disabled = true;
+
+  editPostForm.title.value = post.title;
+  editPostForm.body.value = post.body;
+  editPostForm.tags.value = post.tags;
+  editPostForm.media.value = post.media;
+
+  btn.disabled = false;
   
 
   editPostForm.addEventListener("submit", async (event) => {
