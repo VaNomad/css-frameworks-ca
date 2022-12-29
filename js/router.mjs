@@ -6,7 +6,6 @@
 // import { updatePost } from "./api/posts/updatePosts.mjs"
 // import { removePost } from "./api/posts/removePosts.mjs";
 
-import * as postMethods from "./api/posts/postBarrel.mjs";
 import * as listeners from "./api/handlers/HandlersBarrel.mjs";
 import * as profiles from "./api/handlers/editProfileHandler.mjs";
 // import { renderPostTemplates } from "./api/posts/postTemplate.mjs";
@@ -46,14 +45,6 @@ export function router() {
       return;
   }
 }
-
-// posts.createPost();
-// posts.updatePost();
-// posts.removePost();
-// posts.getPost();
-// postMethods.getPosts().then(console.log);
-// posts.removePost(1905);
-
 
 // async function testTemplate() {
 //   const posts = await postMethods.getPosts();
