@@ -408,12 +408,7 @@ button:not(:disabled),
 }
 
 textarea {
-  resize: none;
-  padding: 1rem;
-}
-
-textarea::placeholder {
-  color: grey;
+  resize: vertical;
 }
 
 fieldset {
@@ -11021,6 +11016,11 @@ body {
 
 .friends a {
   color: #0d6efd;
+}
+
+.form-control:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .recents-img-box-left {

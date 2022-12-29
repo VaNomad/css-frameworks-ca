@@ -38,6 +38,10 @@ export function router() {
       console.log("editPost");
       listeners.editPostListener();
       return;
+    case "/editProfile.html":
+      console.log("editProfile");
+      listeners.editProfileListener();
+      return;
   }
 }
 
@@ -49,13 +53,13 @@ export function router() {
 // posts.removePost(1905);
 
 
-// async function testTemplate() {
-//   const posts = await postMethods.getPosts();
-//   // const post = posts.pop();
-//   // const post = posts[1];
-//   const container = document.querySelector("#newPost");
-//   // renderPostTemplate(post, container);
-//   renderPostTemplates(posts, container)
-// }
+async function testTemplate() {
+  const posts = await postMethods.getPosts();
+  // const post = posts.pop();
+  // const post = posts[1];
+  const container = document.querySelector("#posts");
+  // renderPostTemplate(post, container);
+  postMethods.renderPostTemplates(posts, container)
+}
 
-// testTemplate();
+testTemplate();

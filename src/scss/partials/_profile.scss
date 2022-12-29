@@ -22,6 +22,11 @@
   color: $blue;
 }
 
+.form-control:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 //recent posts-section
 .recents-img-box-left {
   transform: translateX(-50%);

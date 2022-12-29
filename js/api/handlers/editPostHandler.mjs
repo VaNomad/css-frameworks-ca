@@ -8,11 +8,8 @@ export async function editPostListener() {
   const url = new URL(location.href);
   
   const id = url.searchParams.get("id");
-  
-  
 
-  //testing code for pre-fill of editing a post
-
+  //code for pre-fill of editing a post
   const post = await getPost(id);
 
   const btn = document.querySelector("#editBtn");
