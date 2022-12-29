@@ -5,8 +5,10 @@
 // // import { createPost } from "./api/posts/createPosts.mjs";
 // import { updatePost } from "./api/posts/updatePosts.mjs"
 // import { removePost } from "./api/posts/removePosts.mjs";
+
 import * as postMethods from "./api/posts/postBarrel.mjs";
-import * as listeners from "./api/handlers/HandlersBarrel.mjs"
+import * as listeners from "./api/handlers/HandlersBarrel.mjs";
+import * as profiles from "./api/handlers/editProfileHandler.mjs";
 // import { renderPostTemplates } from "./api/posts/postTemplate.mjs";
 // import { renderPostTemplate } from "./api/posts/postTemplate.mjs";
 
@@ -40,7 +42,7 @@ export function router() {
       return;
     case "/editProfile.html":
       console.log("editProfile");
-      listeners.editProfileListener();
+      profiles.editProfileListener();
       return;
   }
 }
@@ -53,13 +55,25 @@ export function router() {
 // posts.removePost(1905);
 
 
-async function testTemplate() {
-  const posts = await postMethods.getPosts();
-  // const post = posts.pop();
-  // const post = posts[1];
-  const container = document.querySelector("#posts");
-  // renderPostTemplate(post, container);
-  postMethods.renderPostTemplates(posts, container)
-}
+// async function testTemplate() {
+//   const posts = await postMethods.getPosts();
+//   // const post = posts.pop();
+//   // const post = posts[1];
+//   const container = document.querySelector("#posts");
+//   // renderPostTemplate(post, container);
+//   postMethods.renderPostTemplates(posts, container)
+// }
 
-testTemplate();
+// testTemplate();
+
+// async function testTemplate() {
+//     const posts = await postMethods.getPosts();
+//     // const post = posts.pop();
+//     // const post = posts[1];
+//     const container = document.querySelector("#posts");
+//     // renderPostTemplate(post, container);
+//     profiles.renderPostTemplates(posts, container)
+//   }
+  
+//   testTemplate();
+  
