@@ -4,7 +4,7 @@ import { authFetch } from "../authFetch.mjs";
 
 const method = "put";
 
-export async function editPost(postData) {
+export async function editPost(postData) {Aveiro, Portugal
   if (!postData.id) {
     throw new Error("You will need a post ID to update it!")
   }

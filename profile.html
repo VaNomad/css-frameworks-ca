@@ -29,10 +29,13 @@
               <a class="nav-link" aria-current="page" href="/index.html">Home</a>
             </li>
             <li class="nav-item fs-5 m-4">
-              <a class="nav-link active" href="/profile.html">Profile</a>
+              <a class="nav-link" href="/posts.html">Posts</a>
             </li>
             <li class="nav-item fs-5 m-4">
               <a class="nav-link" href="/login.html">Login</a>
+            </li>
+            <li class="nav-item fs-5 m-4">
+              <a class="nav-link active" href="/profile.html">Profile</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -46,17 +49,6 @@
 
   <main>
 
-    <form id="editProfile" class="row g-3 mt-5">
-      <h3 class="p-3">Your Profile:</h3>
-      <div class="col-md-12 col-lg-10 mx-auto my-4">
-        <input type="url" name="banner" class="form-control p-4" id="banner" placeholder="Banner">
-      </div>
-      <div class="col-md-12 col-lg-10 mx-auto my-4">
-        <input type="url" name="avatar" class="form-control p-4" id="avatar" placeholder="Avatar">
-      </div>
-      <button class="btn btn-success col-lg-10 mx-auto p-2 my-5 p-4" id="editBtn">Update Profile</button>
-      </div>
-    </form>
 
     <!-- Profile -->
     <div class="container">
@@ -98,7 +90,9 @@
                 <p class="ms-5">corey.spaceface@mail.com</p>
               </div>
             </div>
+            <a href="/editProfile.html"><button class="btn btn-success col-lg-8 mx-auto p-2 my-5 p-4" id="editBtn">Update Profile</button></a>
           </div>
+          
         </div>
       </div>
     </div>
