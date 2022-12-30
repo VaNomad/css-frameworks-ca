@@ -1,6 +1,4 @@
-import {
-  API_SOCIAL_URL
-} from "../../constants.mjs";
+import { API_SOCIAL_URL } from "../../constants.mjs";
 import * as storage from "../../storage/storage.mjs";
 
 const loginURL = `${API_SOCIAL_URL}/auth/login`;
@@ -18,10 +16,7 @@ export async function loginUser(login) {
       body
     });
 
-    const {
-      accessToken,
-      ...profile
-    } = await response.json();
+    const { accessToken, ...profile } = await response.json();
     
 
     storage.save("accessToken", accessToken);
@@ -29,6 +24,7 @@ export async function loginUser(login) {
     storage.save("profile", profile)
 
     return response
+    
 
   } catch (error) {
     console.log("The User name or password in incorrect");
