@@ -33,8 +33,8 @@ import { displayError } from "../../ui/displayError.mjs";
 
         try {
             await registerNewUser(profile);
-            if (profile.id.ok) {
-                window.location = "/login.html"  
+            if (profile.ok) {
+                window.location = "/login.html";  
             } 
         } catch (error) {
             displayError(registryForm, error);
