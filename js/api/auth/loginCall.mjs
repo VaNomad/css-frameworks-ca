@@ -22,6 +22,7 @@ export async function loginUser(login) {
       accessToken,
       ...profile
     } = await response.json();
+    
 
     storage.save("accessToken", accessToken);
 

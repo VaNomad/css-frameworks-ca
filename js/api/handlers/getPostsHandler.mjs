@@ -5,7 +5,7 @@ import {
 export function getTokenListener() {
   const loginForm = document.querySelector("#loginForm");
 
-  loginForm.addEventListener("submit", (event) => {
+  loginForm.addEventListener("submit", async (event) => {
     event.preventDefault();
     const form = event.target;
     const formData = new FormData(form);
