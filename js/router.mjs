@@ -6,8 +6,10 @@
 // import { updatePost } from "./api/posts/updatePosts.mjs"
 // import { removePost } from "./api/posts/removePosts.mjs";
 
-import * as listeners from "./api/handlers/HandlersBarrel.mjs";
-import * as profiles from "./api/handlers/editProfileHandler.mjs";
+import * as listeners from "./api/handlers/handlersBarrel.mjs";
+// import * as profiles from "./api/handlers/editProfileHandler.mjs";
+import * as posts from "./api/posts/postBarrel.mjs"
+
 // import { renderPostTemplates } from "./api/posts/postTemplate.mjs";
 // import { renderPostTemplate } from "./api/posts/postTemplate.mjs";
 
@@ -41,7 +43,11 @@ export function router() {
       return;
     case "/editProfile.html":
       console.log("editProfile");
-      profiles.editProfileListener();
+      listeners.editProfileListener();
+      return;
+    case "/posts.html":
+      console.log("getPosts");
+      posts.postTemplate();
       return;
   }
 }
@@ -58,13 +64,13 @@ export function router() {
 // testTemplate();
 
 // async function testTemplate() {
-//     const posts = await postMethods.getPosts();
-//     // const post = posts.pop();
+//     const posts = await posts.getPosts();
+//     const post = posts.pop();
 //     // const post = posts[1];
-//     const container = document.querySelector("#posts");
+//     const container = document.querySelector("#getPosts");
 //     // renderPostTemplate(post, container);
-//     profiles.renderPostTemplates(posts, container)
+//     posts.renderPostTemplates(posts, container)
 //   }
   
 //   testTemplate();
-  
+posts.getPosts().then(console.log);
