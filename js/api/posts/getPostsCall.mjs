@@ -14,9 +14,6 @@ import { authFetch } from "../authFetch.mjs";
 // const method = "delete";
 
 export async function getPosts() {
-  // if (!id) {
-  //   throw new Error("You will need an ID to delete it!")
-  // }
 
   const getPostsURL = `${API_SOCIAL_URL}/posts`;
   

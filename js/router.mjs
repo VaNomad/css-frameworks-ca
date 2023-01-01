@@ -16,7 +16,7 @@ import * as posts from "./api/posts/postBarrel.mjs"
 
 
 
-export function router() {
+export async function router() {
   const path = window.location.pathname;
 
   switch (path) {
@@ -47,8 +47,16 @@ export function router() {
       return;
     case "/posts.html":
       console.log("getPosts");
-      posts.postTemplate();
+      const renderPosts = await getPosts();
+      const postContainer = document.querySelector("#posts");
+      posts.renderPostTemplates(renderPosts, postContainer);
       return;
+
+      
+    // case "/posts.html":
+    //   console.log("getPosts");
+    //   posts.getPosts();
+    //   return;
   }
 }
 

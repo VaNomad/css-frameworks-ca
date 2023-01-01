@@ -10,6 +10,7 @@ export async function editPost(postData) {
   }
 
   const editPostsURL = `${API_SOCIAL_URL}/posts/${postData.id}`;
+  
   const response = await authFetch(editPostsURL, {
     method,
     body: JSON.stringify(postData)
