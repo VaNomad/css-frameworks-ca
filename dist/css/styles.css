@@ -11018,6 +11018,11 @@ body {
   color: #0d6efd;
 }
 
+.form-control:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .recents-img-box-left {
   transform: translateX(-50%);
 }
@@ -11044,6 +11049,11 @@ body {
 
 .btn {
   color: #fff;
+}
+
+.form-control::placeholder {
+  color: grey;
+  opacity: 70%;
 }
 
 .navbar-brand img {

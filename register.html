@@ -18,7 +18,6 @@
       <div class="container-fluid">
         <a class="navbar-brand col-2" href="/index.html"><img src="/assets/icons/logo.png" class="logo-img m-3"
             alt=""><span class="logo-text">DEMO TAPE</span></a>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -38,7 +37,7 @@
               <a class="nav-link" href="/profile.html">Profile</a>
             </li>
           </ul>
-          <form id="searchForm" class="d-flex" role="search">
+          <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success text-black" type="submit">Search</button>
           </form>
@@ -49,19 +48,27 @@
 
   <main>
     <div class="container">
-      <h1 class="">Login page</h1>
-      <form id="loginForm" class="row g-3 mt-5">
+      <h1 class="">Register Account</h1>
+      <div class="col bold" id="regMsg"></div>
+      <form id="registerForm" class="row g-3 mt-5" action="/login.html">
         <div class="col-md-12 col-lg-10 mx-auto my-4">
-          <input type="email" name="email" title="The account does not exist" class="form-control p-4" id="eMail" placeholder="Your E-mail" required>
+          <input type="text" name="name" pattern="^[\w]+$" maxlength="20" title="User name must only contain lower case and Upper case characters, numbers and underscore: _ Example: YourNAME_8899" class="form-control p-4" id="userName" placeholder="Full Name or User Name" required>
+        </div>
+        <div class="col-md-12 col-lg-10 mx-auto my-4">
+          <input type="email" name="email" pattern="^[\w\-.]+@(stud.)?noroff.no$" title="It is only allowed for users tha have a stud.noroff.no or noroff.no account to register. Example: my_name8899@stud.noroff.no/noroff.no" class="form-control p-4" id="eMail" placeholder="Your E-mail" required>
         </div>
         <div class="col-md-12 col-lg-10 mx-auto my-4">
           <input type="password" name="password" minlength=8 class="form-control p-4" id="password" placeholder="Your password" required>
         </div>
-        <button type="button form-validation" class="btn btn-primary col-lg-10 mx-auto my-5 p-4">LOG IN</button>
-        <a href="/register.html" class=" btn btn-danger col-lg-10 mx-auto my-5 p-4"><button type="button" class="btn">CREATE NEW ACCOUNT</button></a>
+        <div class="col-md-12 col-lg-10 mx-auto my-4">
+          <input type="url" name="banner" class="form-control p-4" id="banner" placeholder="Banner">
+        </div>
+        <div class="col-md-12 col-lg-10 mx-auto my-4">
+          <input type="url" name="avatar" class="form-control p-4" id="avatar" placeholder="Avatar">
+        </div>
+        <button type="submit form-validation" class="btn btn-success col-lg-10 mx-auto p-2 my-5 p-4">CREATE ACCOUNT</button>
       </form>
-      
-    </div>
+
   </main>
 
   <footer class="my-5 pt-5 text-muted text-center text-small">
