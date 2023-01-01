@@ -10,6 +10,8 @@ import * as listeners from "./api/handlers/handlersBarrel.mjs";
 // import * as profiles from "./api/handlers/editProfileHandler.mjs";
 import * as posts from "./api/posts/postBarrel.mjs"
 
+// import { viewPost } from "./api/handlers/singlePost.mjs";
+
 // import { renderPostTemplates } from "./api/posts/postTemplate.mjs";
 // import { renderPostTemplate } from "./api/posts/postTemplate.mjs";
 
@@ -52,10 +54,7 @@ export async function router() {
       posts.renderPostTemplates(renderPosts, postContainers);
       return;
     case "/post.html":
-      console.log("getPost");
-      const renderPost = await posts.getPost(id);
-      const postContainer = document.querySelector("#newPost");
-      posts.renderPostTemplate(renderPost, postContainer);
+      listeners.viewPost()
       return;
     
 
