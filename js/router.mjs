@@ -47,7 +47,7 @@ export async function router() {
       return;
     case "/posts.html":
       console.log("getPosts");
-      const renderPosts = await getPosts();
+      const renderPosts = await posts.getPosts();
       const postContainer = document.querySelector("#posts");
       posts.renderPostTemplates(renderPosts, postContainer);
       return;
