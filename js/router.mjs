@@ -39,7 +39,6 @@ export async function router() {
       return;
     case "/post.html":
       listeners.viewPost();
-      listeners.viewAllPosts();
       return;
   }
 }
