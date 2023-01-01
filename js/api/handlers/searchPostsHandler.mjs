@@ -8,7 +8,7 @@ export async function viewAllPosts() {
     event.preventDefault();
     const value = event.target.value.toLowerCase()
     let filteredPosts = posts.filter(function(post) {
-        // return post.body?.includes(value) || post.title.includes(value) || post.author.name.toLowerCase().includes(value)
+        
       return (
         post.body.toLowerCase().includes(value) ||
         post.title.toLowerCase().includes(value)
