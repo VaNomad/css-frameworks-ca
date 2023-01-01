@@ -5,6 +5,7 @@ import { editProfile, getProfile } from "../profile/profileBarrel.mjs";
 
 export async function editProfileListener() {
   const editProfileForm = document.querySelector("#editProfile");
+  const regMsg = document.querySelector("#regMsg");
 
   const { name, email } = load("profile");
   editProfileForm.name.value = name;
@@ -31,6 +32,25 @@ export async function editProfileListener() {
     profile.name = name;
     profile.email = email;
 
+    setTimeout(() => {
+      regMsg.style.display = "none";
+    }, 7000);
+    // form.reset();
+    if (editProfileForm.avatar.value || editProfileForm.banner.value) {
+        regMsg.innerHTML = `
+                                  <div class="card border-success mx-auto" style="min-width: 50rem;">
+                                  <div class="card-header text-info">Success!</div>
+                                  <div class="card-body">
+                                    <h5 class="card-title lead">Your profile has been updated!</h5>
+                                  </div>`
+                                  form.reset();
+                            
+                                  
+      
+    } else {
+      displayError(editProfileForm, error);
+    }
+
     try {
       const response = await editProfile(profile);
       console.log(response);
@@ -42,6 +62,8 @@ export async function editProfileListener() {
     } catch (error) {
       displayError(editProfileForm, error);
     }
+
+    
 
   });
 };
