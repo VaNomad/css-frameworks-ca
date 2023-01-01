@@ -1,22 +1,5 @@
-// import { registerFormListener } from "./api/handlers/registerHandler.mjs";
-// import { loginFormListener } from "./api/handlers/loginHandler.mjs";
-// import { getTokenListener } from "./api/handlers/getPostsHandler.mjs";
-// import { createPostListener } from "./api/handlers/createPostHandler.mjs";
-// // import { createPost } from "./api/posts/createPosts.mjs";
-// import { updatePost } from "./api/posts/updatePosts.mjs"
-// import { removePost } from "./api/posts/removePosts.mjs";
-
 import * as listeners from "./api/handlers/handlersBarrel.mjs";
-// import * as profiles from "./api/handlers/editProfileHandler.mjs";
 import * as posts from "./api/posts/postBarrel.mjs"
-
-// import { viewPost } from "./api/handlers/singlePost.mjs";
-
-// import { renderPostTemplates } from "./api/posts/postTemplate.mjs";
-// import { renderPostTemplate } from "./api/posts/postTemplate.mjs";
-
-
-
 
 export async function router() {
   const path = window.location.pathname;
@@ -52,39 +35,13 @@ export async function router() {
       const renderPosts = await posts.getPosts();
       const postContainers = document.querySelector("#posts");
       posts.renderPostTemplates(renderPosts, postContainers);
+      listeners.viewAllPosts();
       return;
     case "/post.html":
-      listeners.viewPost()
+      listeners.viewPost();
+      listeners.viewAllPosts();
       return;
-    
-
-      
-    // case "/posts.html":
-    //   console.log("getPosts");
-    //   posts.getPosts();
-    //   return;
   }
 }
 
-// async function testTemplate() {
-//   const posts = await postMethods.getPosts();
-//   // const post = posts.pop();
-//   // const post = posts[1];
-//   const container = document.querySelector("#posts");
-//   // renderPostTemplate(post, container);
-//   postMethods.renderPostTemplates(posts, container)
-// }
-
-// testTemplate();
-
-// async function testTemplate() {
-//     const posts = await posts.getPosts();
-//     const post = posts.pop();
-//     // const post = posts[1];
-//     const container = document.querySelector("#getPosts");
-//     // renderPostTemplate(post, container);
-//     posts.renderPostTemplates(posts, container)
-//   }
-  
-//   testTemplate();
 posts.getPosts().then(console.log);

@@ -1,6 +1,4 @@
-import {
-  loginUser
-} from "../auth/loginCall.mjs";
+import { loginUser } from "../auth/loginCall.mjs";
 import { displayError } from "../../ui/displayError.mjs";
 
 export function loginFormListener() {
@@ -11,7 +9,6 @@ export function loginFormListener() {
     const form = event.target;
     const formData = new FormData(form);
     const login = Object.fromEntries(formData.entries());
-    // loginUser(login);
 
     try {
       const response = await loginUser(login);
@@ -37,7 +34,6 @@ export async function getTokenListener() {
     const formData = new FormData(form);
     const getToken = Object.fromEntries(formData.entries());
     console.log(getToken);
-
     
   });
 };

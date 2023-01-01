@@ -1,7 +1,6 @@
 import { API_SOCIAL_URL } from "../../constants.mjs";
 import { authFetch } from "../authFetch.mjs";
 
-
 const method = "put";
 
 export async function editProfile(profileData) {
@@ -15,7 +14,5 @@ export async function editProfile(profileData) {
     body: JSON.stringify(profileData)
   })
 
-  // const result = await response.json();
-  // console.log(result);
   return await response.json();
 }

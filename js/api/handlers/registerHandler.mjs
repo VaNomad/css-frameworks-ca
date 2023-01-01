@@ -1,25 +1,5 @@
-
-// import { API_BASE_URL } from "./constants.mjs";
-
 import { registerNewUser } from "../auth/registerCall.mjs";
 import { displayError } from "../../ui/displayError.mjs";
-
-// export async function register(url, profile, method) {
-    
-//     const response = await fetch(url, {
-//         method: method,
-//         headers: {
-//             "Content-Type": "application/json",
-//         },
-
-//         body: JSON.stringify(profile),
-//     });
-
-//     const result = await response.json()
-
-// }
-
-
 
  export async function registerFormListener() {
     const registryForm = document.querySelector("#registerForm");
@@ -32,16 +12,6 @@ import { displayError } from "../../ui/displayError.mjs";
         const profile = Object.fromEntries(formData.entries());
         console.log(profile);
 
-        // try {
-        //     await registerNewUser(profile);
-        //     if (profile.ok) {
-        //         form.reset();
-        //         window.location = "/login.html";
-        //     }
-        // } catch (error) {
-        //     displayError(registryForm, error);
-        // }
-        
         setTimeout(() => {
             regMsg.style.display = "none";
           }, 7000);
@@ -64,8 +34,6 @@ import { displayError } from "../../ui/displayError.mjs";
           } else {
             displayError(registryForm, error);
           }
-        
-        
         
     });
 };

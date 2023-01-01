@@ -14,12 +14,3 @@ export function load(key) {
 export function remove(key) {
   localStorage.removeItem(key);
 }
-
-// export function userProfile(profile) {
-//   try {
-//     const profileData = localStorage.getItem(profile);
-//     return JSON.parse(profileData);
-//   } catch (error) {
-//     return null
-//   }
-// }

@@ -34,16 +34,11 @@ export async function registerNewUser(profile) {
 
 
   if (response.ok) {
-    // return await response.json();
     return result
   }
 
-  // const error = await response.json();
-
   const error = result
   console.log(error);
-
-
 
   const errorMessage = error.errors[0].message;
   console.log("error", error);

@@ -30,8 +30,6 @@ export async function editPostListener() {
     const formData = new FormData(form);
     const edit = Object.fromEntries(formData.entries());
     edit.id = id;
-    
-    // loginUser(login);
 
     try {
       const response = await editPost(edit);
