@@ -48,9 +48,16 @@ export async function router() {
     case "/posts.html":
       console.log("getPosts");
       const renderPosts = await posts.getPosts();
-      const postContainer = document.querySelector("#posts");
-      posts.renderPostTemplates(renderPosts, postContainer);
+      const postContainers = document.querySelector("#posts");
+      posts.renderPostTemplates(renderPosts, postContainers);
       return;
+    case "/post.html":
+      console.log("getPost");
+      const renderPost = await posts.getPost(id);
+      const postContainer = document.querySelector("#newPost");
+      posts.renderPostTemplate(renderPost, postContainer);
+      return;
+    
 
       
     // case "/posts.html":

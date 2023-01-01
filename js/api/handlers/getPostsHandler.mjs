@@ -1,6 +1,4 @@
-import {
-  getPosts
-} from "../posts/getPostsCall.mjs";
+import { getPosts } from "../posts/getPostsCall.mjs";
+import { createPost } from "../posts/createPosts.mjs";
 
-const postCard = document.querySelector("#posts");
 
