@@ -35,6 +35,7 @@ export async function router() {
       posts.renderPostTemplates(renderProfilePosts, profilePostContainers);
       handlers.editPostListener();
       handlers.createPostListener();
+      // posts.editLicence();
       return;
     case "/editProfile.html":
       console.log("editProfile");
@@ -47,9 +48,11 @@ export async function router() {
       posts.renderPostTemplates(renderPosts, postContainers);
       handlers.viewAllPosts();
       handlers.createPostListener();
+      // posts.editLicence();
       return;
     case "/post.html":
       handlers.viewPost();
+      handlers.removePost();
       return;
   }
 }
