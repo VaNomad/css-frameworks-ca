@@ -1,4 +1,4 @@
-import * as listeners from "./api/handlers/handlersBarrel.mjs";
+import * as handlers from "./api/handlers/handlersBarrel.mjs";
 import * as posts from "./api/posts/postBarrel.mjs"
 import { renderPostTemplate } from "./api/posts/postBarrel.mjs";
 
@@ -9,39 +9,47 @@ export async function router() {
     case "/":
     case "/index.html":
       console.log("home page");
-      listeners.createPostListener();
+      handlers.createPostListener();
       return;
     case "/register.html":
       console.log("register");
-      listeners.registerFormListener();
+      handlers.registerFormListener();
       return;
     case "/login.html":
       console.log("login");
-      listeners.loginFormListener();
-      listeners.getTokenListener();
+      handlers.loginFormListener();
+      handlers.getTokenListener();
       return;
     case "/createPost.html":
       console.log("createPost");
-      listeners.createPostListener();
+      handlers.createPostListener();
       return;
     case "/editPost.html":
       console.log("editPost");
-      listeners.editPostListener();
+      handlers.editPostListener();
+      return;
+    case "/profile.html":
+      console.log("editProfilePost");
+      const renderProfilePosts = await posts.getProfilePosts();
+      const profilePostContainers = document.querySelector("#profilePosts");
+      posts.renderPostTemplates(renderProfilePosts, profilePostContainers);
+      handlers.editPostListener();
+      handlers.createPostListener();
       return;
     case "/editProfile.html":
       console.log("editProfile");
-      listeners.editProfileListener();
+      handlers.editProfileListener();
       return;
     case "/posts.html":
       console.log("getPosts");
       const renderPosts = await posts.getPosts();
       const postContainers = document.querySelector("#posts");
       posts.renderPostTemplates(renderPosts, postContainers);
-      listeners.viewAllPosts();
-      listeners.createPostListener();
+      handlers.viewAllPosts();
+      handlers.createPostListener();
       return;
     case "/post.html":
-      listeners.viewPost();
+      handlers.viewPost();
       return;
   }
 }

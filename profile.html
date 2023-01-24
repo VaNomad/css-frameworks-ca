@@ -98,33 +98,53 @@
     </div>
 
     <!-- Write New Wall Post: -->
-    <div class="container my-5">
-      <div class="row">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 new-message mx-auto">
-          <h2>Write New Wall Post:</h2>
-          <form>
-            <div class="border bg-primary rounded-pill p-3">
-              <div class="d-flex p-2">
-                <div class="col-4 wall-post">
-                  <img src="/assets/images/avatar-50b2edf3b88fc77b63c3f11440e19bc7.jpg"
-                    class="img-thumbnail rounded-circle shadow p-1" alt="...">
-                </div>
-                <div class="p-3 d-flex">
-                  <textarea class="form-control" id="textarea" rows="2" cols="60" placeholder="write new message here..."></textarea>
-                </div>
-                <div class="col-2 d-flex align-items-center justify-content-center">
-                  <a href="" class="border rounded-pill p-4 shadow" style="color: black; font-size: 30px;"><i class="fa-solid fa-plus"></i></a>
-                </div>
-                <button type="submit" class="btn" style="font-size: 30px;"><i class="fa-solid fa-paper-plane"></i></button>
-              </div>
+    <div class="container">
+      <h1 class="">Create Post</h1>
+
+      <form id="createPost" class="row g-3 mt-5">
+        <div class="col-md-12 col-lg-10 mx-auto my-1">
+          <input type="text" name="title" maxlength="50" title="Title must be under 50 characters" class="form-control p-4" id="title" placeholder="Title" required>
+        </div>
+        <div class="col-md-12 col-lg-10 mx-auto my-4">
+          <input type="url" name="media" class="form-control p-4" id="" placeholder="Media link">
+        </div>
+        <div class="col-md-12 col-lg-10 mx-auto my-4">
+          <textarea name="body" id="textArea" cols="60" rows="5" placeholder="Write your post here.."></textarea>
+        </div>
+        <!-- <div class="col-md-12 col-lg-10 mx-auto my-4">
+          <textarea id="tags" cols="58" rows="2" placeholder="Write post tags here"></textarea>
+          <input type="button" hidden class="form-control p-4" value="No of words" onkeyup="wordCount();">
+          <div class="col-md-12 col-lg-10 my-2">
+            <input type="text" class="p-4" id="words" placeholder="No. of tags: 50/ " size="10">
+          </div>
+          
+        </div> -->
+        <button type="submit" class="btn btn-success col-lg-10 mx-auto p-2 mb-5 p-4">Create Post</button>
+      </form>
+
+    </div>
+    <div class="flex-grow-1 text-dark">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-center">
+          <div class="" id="profilePosts">
+            <!-- List of post thumbnails -->
+            <!-- <div class="card-header">
+              <div>name</div>
             </div>
-          </form>
+            <div class="card-body">
+              <h5 class="card-title title">Special title treatment</h5>
+              <p class="card-text ">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="post.html" class="btn btn-primary">View Post</a>
+            </div>
+           -->
+          
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Friends: -->
-    <div class="container">
+    <!-- <div class="container">
       <div class="row friends">
         <div class="d-flex justify-content-between mt-5">
           <h3>Friends:</h3>
@@ -155,10 +175,10 @@
           <h2 class="p-4 mb-5 text-danger">LEIA</h2>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Recent Posts: -->
-    <div class="container">
+    <!-- <div class="container">
       <div class="row d-flex justify-content-center">
 
         <h1 class="p-5">Recent Posts:</h1>
@@ -215,18 +235,18 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
   </main>
 
-  <footer class="my-5 pt-5 text-muted text-center text-small">
+  <!-- <footer class="my-5 pt-5 text-muted text-center text-small">
     <p class="mb-1">© 2017 - 2022 Company Name</p>
     <ul class="list-inline">
       <li class="list-inline-item"><a href="#">Privacy</a></li>
       <li class="list-inline-item"><a href="#">Terms</a></li>
       <li class="list-inline-item"><a href="#">Support</a></li>
     </ul>
-  </footer>
+  </footer> -->
 </body>
 
 </html>

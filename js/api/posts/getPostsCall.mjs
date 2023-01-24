@@ -31,3 +31,14 @@ export async function getPost(id) {
   return await response.json();
 }
 
+export async function getProfilePosts() {
+  // if (!profile.name) {
+  //   throw new Error("You will need an ID to get the post!")
+  // }
+  
+  const getProfilePostsURL = `${API_SOCIAL_URL}/profiles/${profile.name}/posts`;
+  
+  const response = await authFetch(getProfilePostsURL)
+
+  return await response.json();
+}
