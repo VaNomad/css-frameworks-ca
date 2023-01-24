@@ -5,3 +5,4 @@ export * from "/js/api/handlers/registerHandler.mjs";
 export * from "/js/api/handlers/editProfileHandler.mjs";
 export * from "/js/api/handlers/singlePostHandler.mjs";
 export * from "/js/api/handlers/searchPostsHandler.mjs";
+export * from "/js/api/handlers/deletePostsHandler.mjs";
