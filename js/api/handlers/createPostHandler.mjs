@@ -21,6 +21,6 @@ export function createPostListener() {
     } catch (error) {
       displayError(createPostForm, error);
     }
-
+    location.reload();
   });
 };

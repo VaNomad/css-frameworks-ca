@@ -50,18 +50,18 @@
   <main>
 
     <!-- Write New Message -->
-    <div class="container">
+    <!-- <div class="container">
       <div class="row d-flex justify-content-center align-items-center mb-5">
         <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8 new-message">
           <h2 class="mb-5 fs-4">Write New Message:</h2>
-          <form id="newPost">
+          <form id="createPost">
             <div class="border bg-primary rounded-pill p-4">
               <div class="d-flex p-2">
                 <div class="col-4">
                   <i class="fa-solid fa-user-plus m-2"></i>  
                 </div>
                 <div class="p-3 d-flex">
-                  <textarea class="form-control" id="textarea" rows="2" cols="60" placeholder="write new message here..."></textarea>
+                  <textarea name="title" class="form-control" id="textarea" rows="2" cols="60" placeholder="write new message here..."></textarea>
                 </div>
                 <div class="col-2 d-flex align-items-center justify-content-center">
                   <a href="" class="border rounded-pill p-4 shadow" style="color: black; font-size: 30px;"><i class="fa-solid fa-plus"></i></a>
@@ -70,7 +70,28 @@
               </div>
             </div>
           </form>
+        </div> -->
+
+        <div class="container">
+      <div class="row d-flex justify-content-center align-items-center mb-5">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8 new-message">
+          <h2 class="mb-5 fs-4">Write New Message:</h2>
+          <form id="createPost">
+            <div class="border bg-primary rounded-pill p-4">
+              <div class="d-flex p-2">
+                <div class="col-3">
+                  <img src="/assets/images/Unknown7.jpg" class="rounded-circle shadow p-1 " alt="..."> 
+                </div>
+                <div class="p-3 d-flex">
+                  <textarea name="title" class="form-control" id="textarea" rows="2" cols="60" placeholder="write new message here..."></textarea>
+                </div>
+                <button type="submit" class="border rounded-pill p-5 shadow bg-primary" style="color: black; font-size: 40px;"><i class="fa-solid fa-paper-plane"></i></button>
+              </div>
+            </div>
+          </form>
         </div>
+      </div>
+    </div>
 
         <!-- Rankings Carousel -->
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-4">

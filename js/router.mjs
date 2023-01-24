@@ -8,6 +8,7 @@ export async function router() {
     case "/":
     case "/index.html":
       console.log("home page");
+      listeners.createPostListener();
       return;
     case "/register.html":
       console.log("register");
@@ -36,6 +37,7 @@ export async function router() {
       const postContainers = document.querySelector("#posts");
       posts.renderPostTemplates(renderPosts, postContainers);
       listeners.viewAllPosts();
+      listeners.createPostListener();
       return;
     case "/post.html":
       listeners.viewPost();
