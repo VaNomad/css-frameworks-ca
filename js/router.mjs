@@ -1,6 +1,6 @@
 import * as handlers from "./api/handlers/handlersBarrel.mjs";
 import * as posts from "./api/posts/postBarrel.mjs"
-import { renderPostTemplate } from "./api/posts/postBarrel.mjs";
+// import { renderPostTemplate } from "./api/posts/postBarrel.mjs";
 
 export async function router() {
   const path = window.location.pathname;
