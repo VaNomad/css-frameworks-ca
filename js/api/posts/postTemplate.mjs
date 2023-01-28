@@ -1,4 +1,5 @@
 import { load } from "../../storage/storage.mjs";
+import { deletePost } from "../handlers/deletePostHandler.mjs";
 
 export function postTemplate(postData) {
   const post = document.createElement("div");
@@ -23,7 +24,7 @@ export function postTemplate(postData) {
     const deleteBtn = document.createElement("button");
     const editBtn = document.createElement("button");
     deleteBtn.innerText = "delete post"
-    deletePostHandler(deleteBtn, postData.id)
+    deletePost(deleteBtn, postData.id)
     editBtn.innerText = "edit post"
     post.append(deleteBtn);
     post.append(editBtn);
