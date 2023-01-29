@@ -22,12 +22,14 @@ export function postTemplate(postData) {
   }
 
   if (postData.author.name === load("profile").name) {
-    const deleteBtn = document.createElement("button");
-    const editBtn = document.createElement("button");
+    const deleteBtn = document.createElement("a");
+    const editBtn = document.createElement("a");
     deleteBtn.innerText = "Delete"
+    deleteBtn.classList.add("btn", "btn-danger")
     deletePost(deleteBtn, postData.id)
     editBtn.innerText = "Edit"
-    editPost(editBtn, postData.id)
+    editBtn.setAttribute('href', `editpost.html?id=${postData.id}`)
+    editBtn.classList.add("btn", "btn-warning")
     post.append(deleteBtn);
     post.append(editBtn);
   }

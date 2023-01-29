@@ -55,10 +55,10 @@ export async function router() {
     case "/post.html":
       posts.getPosts();
       handlers.viewPost();
-      posts.removePost();
+      // posts.removePost();
       posts.editLicence();
       return;
   }
 }
 
-posts.getPosts().then(console.log);
+// posts.getPosts().then(console.log);
