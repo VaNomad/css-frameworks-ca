@@ -58,6 +58,9 @@ export async function router() {
       // posts.removePost();
       posts.editLicence();
       return;
+    case "/editPost.html":
+      handlers.deletePost();
+      return;
   }
 }
 

@@ -29,7 +29,7 @@ export function loginFormListener() {
                                       form.reset();
                                       
                                       setTimeout(() => {
-                                          window.location = "/login.html";;
+                                          window.location = "/login.html";
                                         }, 3500);
                                       
           
