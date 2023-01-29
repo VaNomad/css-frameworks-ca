@@ -11,6 +11,7 @@ import { displayError } from "../../ui/displayError.mjs";
         const formData = new FormData(form);
         const profile = Object.fromEntries(formData.entries());
         console.log(profile);
+        registerNewUser(profile);
 
         setTimeout(() => {
             regMsg.style.display = "none";

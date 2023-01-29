@@ -20,8 +20,8 @@ export async function registerNewUser(profile) {
     headers: {
       "Content-Type": "application/json"
     },
-    method,
-    body
+    method: method,
+    body: body,
   });
   
   console.log(response);
