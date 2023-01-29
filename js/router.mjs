@@ -9,6 +9,9 @@ export async function router() {
     case "/":
     case "/index.html":
       console.log("home page");
+      const renderPost = await posts.getPosts();
+      const postContainer = document.querySelector("#specificPosts");
+      posts.renderPostTemplates(renderPost, postContainer);
       handlers.createPostListener();
       handlers.viewAllPosts();
       return;

@@ -17,6 +17,7 @@ export function loginFormListener() {
       
       if (response.ok) {
         window.location.replace("/profile.html");
+        
         return response
       } else {
         regMsg.innerHTML = `
@@ -30,7 +31,7 @@ export function loginFormListener() {
                                       
                                       setTimeout(() => {
                                           window.location = "/login.html";
-                                        }, 3500);
+                                        }, 2500);
                                       
           
         

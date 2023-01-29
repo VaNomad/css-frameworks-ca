@@ -1,6 +1,5 @@
 import { load } from "../../storage/storage.mjs";
 import { deletePost } from "../handlers/deletePostHandler.mjs";
-import { editPost } from "./editPost.mjs";
 
 export function postTemplate(postData) {
   const post = document.createElement("div");

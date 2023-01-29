@@ -15,7 +15,7 @@ import { displayError } from "../../ui/displayError.mjs";
 
         setTimeout(() => {
             regMsg.style.display = "none";
-          }, 7000);
+          }, 4000);
           // form.reset();
           if (registryForm.password.value && registryForm.name.value && registryForm.email.value) {
               regMsg.innerHTML = `
@@ -29,7 +29,7 @@ import { displayError } from "../../ui/displayError.mjs";
                                         
                                         setTimeout(() => {
                                             window.location = "/login.html";;
-                                          }, 7500);
+                                          }, 4500);
                                         
             
           } else {
