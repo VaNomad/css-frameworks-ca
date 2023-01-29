@@ -26,7 +26,7 @@ export async function router() {
       console.log("createPost");
       handlers.createPostListener();
       return;
-    case "/editPost.html":
+    case "/editpost.html":
       console.log("editPost");
       handlers.editPostListener();
       return;
