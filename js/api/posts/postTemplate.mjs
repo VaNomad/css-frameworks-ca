@@ -21,7 +21,7 @@ export function postTemplate(postData) {
     post.append(img);
   }
 
-  if (postData.author === load("profile").author) {
+  if (postData.author.name === load("profile").name) {
     const deleteBtn = document.createElement("button");
     const editBtn = document.createElement("button");
     deleteBtn.innerText = "Delete"

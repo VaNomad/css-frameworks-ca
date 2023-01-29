@@ -24,7 +24,7 @@ export async function getPost(id) {
     throw new Error("You will need an ID to get the post!")
   }
 
-  const getPostURL = `${API_SOCIAL_URL}/posts/${id}`;
+  const getPostURL = `${API_SOCIAL_URL}/posts/${id}/?_author=true`;
   
   const response = await authFetch(getPostURL)
 
