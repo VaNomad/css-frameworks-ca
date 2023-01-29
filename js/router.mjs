@@ -10,10 +10,12 @@ export async function router() {
     case "/index.html":
       console.log("home page");
       handlers.createPostListener();
+      handlers.viewAllPosts();
       return;
     case "/register.html":
       console.log("register");
       handlers.registerFormListener();
+      handlers.viewAllPosts();
       return;
     case "/login.html":
       console.log("login");
@@ -35,7 +37,7 @@ export async function router() {
       posts.renderPostTemplates(renderProfilePosts, profilePostContainers);
       handlers.editPostListener();
       handlers.createPostListener();
-      // posts.editLicence();
+      posts.editLicence();
       return;
     case "/editProfile.html":
       console.log("editProfile");
@@ -48,11 +50,13 @@ export async function router() {
       posts.renderPostTemplates(renderPosts, postContainers);
       handlers.viewAllPosts();
       handlers.createPostListener();
-      // posts.editLicence();
+      posts.editLicence();
       return;
     case "/post.html":
+      posts.getPosts();
       handlers.viewPost();
-      handlers.removePost();
+      posts.removePost();
+      posts.editLicence();
       return;
   }
 }

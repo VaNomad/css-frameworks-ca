@@ -1,5 +1,6 @@
 import { load } from "../../storage/storage.mjs";
 import { deletePost } from "../handlers/deletePostHandler.mjs";
+import { editPost } from "./editPost.mjs";
 
 export function postTemplate(postData) {
   const post = document.createElement("div");
@@ -20,12 +21,13 @@ export function postTemplate(postData) {
     post.append(img);
   }
 
-  if (postData.author.name === load("profile").name) {
+  if (postData.author === load("profile").author) {
     const deleteBtn = document.createElement("button");
     const editBtn = document.createElement("button");
-    deleteBtn.innerText = "delete post"
+    deleteBtn.innerText = "Delete"
     deletePost(deleteBtn, postData.id)
-    editBtn.innerText = "edit post"
+    editBtn.innerText = "Edit"
+    editPost(editBtn, postData.id)
     post.append(deleteBtn);
     post.append(editBtn);
   }
@@ -41,13 +43,13 @@ export function renderPostTemplates(postDataList, parent) {
   parent.append(...postDataList.map(postTemplate)); 
 }
 
-// export function editLicence(name, id) {
-//   if (name === Storage.load("profile").name && id === Storage.load("id").id) {
-//     const deleteBtn = document.createElement("button");
-//     deleteBtn.innerText = "Delete Post"
-//     deleteBtn.classList.add("btn", "bg-danger", "mx-auto");
-//     const editBtn = document.createElement("button");
-//     editBtn.innerText = "Edit Post"
-//     editBtn.classList.add("btn", "bg-secondary", "mx-auto")
-//   }
-// }
+export function editLicence(name, id) {
+  if (name === load("profile").name && id === load("id").id) {
+    const deleteBtn = document.createElement("button");
+    deleteBtn.innerText = "Delete Post"
+    deleteBtn.classList.add("btn", "bg-danger", "mx-auto");
+    const editBtn = document.createElement("button");
+    editBtn.innerText = "Edit Post"
+    editBtn.classList.add("btn", "bg-secondary", "mx-auto")
+  }
+}
