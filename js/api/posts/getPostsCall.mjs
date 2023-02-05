@@ -1,11 +1,3 @@
-// import {
-//   API_SOCIAL_URL
-// } from "../../constants.mjs"
-
-// const url = `${API_SOCIAL_URL}/posts`;
-
-
-
 import { API_SOCIAL_URL } from "../../constants.mjs";
 
 import { authFetch } from "../authFetch.mjs";
@@ -36,7 +28,7 @@ export async function getProfilePosts() {
   //   throw new Error("You will need an ID to get the post!")
   // }
 
-  const getProfilePostsURL = `${API_SOCIAL_URL}/profiles/${profile.name}/posts`;
+  const getProfilePostsURL = `${API_SOCIAL_URL}/profiles/${name}/posts`;
   
   const response = await authFetch(getProfilePostsURL)
 
