@@ -12,7 +12,6 @@ export function createPostListener() {
 
     try {
       const response = await createPost(post);
-      console.log(response);
       
       if (response.ok) {
         window.location.replace("/posts.html");

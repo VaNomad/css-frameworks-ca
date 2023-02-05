@@ -18,7 +18,6 @@ export async function loginUser(login) {
 
     const { accessToken, ...profile } = await response.json();
     
-
     storage.save("accessToken", accessToken);
 
     storage.save("profile", profile)
@@ -27,7 +26,7 @@ export async function loginUser(login) {
     
 
   } catch (error) {
-    console.log("The User name or password in incorrect");
+    return error;
   }
 }
 
