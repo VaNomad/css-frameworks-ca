@@ -24,9 +24,9 @@ export async function getPost(id) {
 }
 
 export async function getProfilePosts() {
-  // if (!profile.name) {
-  //   throw new Error("You will need an ID to get the post!")
-  // }
+  if (!profile.name) {
+    throw new Error("You will need an ID to get the post!")
+  }
 
   const getProfilePostsURL = `${API_SOCIAL_URL}/profiles/${name}/posts`;
   

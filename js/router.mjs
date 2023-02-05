@@ -67,4 +67,4 @@ export async function router() {
   }
 }
 
-// posts.getPosts().then(console.log);
+// posts.getPosts();
