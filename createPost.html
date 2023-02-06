@@ -9,7 +9,7 @@
   <script src="https://kit.fontawesome.com/fbce6b241f.js" crossorigin="anonymous"></script>
   <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer type="module"></script>
   <script src="/js/index.mjs" defer type="module"></script>
-  <title>DEMO TAPE | Profile Page</title>
+  <title>DEMO TAPE | Create Post</title>
 </head>
 
 <body>
@@ -18,7 +18,6 @@
       <div class="container-fluid">
         <a class="navbar-brand col-2" href="/login.html"><img src="/assets/icons/logo.png" class="logo-img m-3"
             alt=""><span class="logo-text">DEMO TAPE</span></a>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -32,10 +31,10 @@
               <a class="nav-link" aria-current="page" href="/login.html">Login</a>
             </li>
             <li class="nav-item fs-5 m-4">
-              <a class="nav-link" href="/posts.html">Posts</a>
+              <a class="nav-link active" href="/posts.html">Posts</a>
             </li>
             <li class="nav-item fs-5 m-4">
-              <a class="nav-link active" href="/profile.html">Profile</a>
+              <a class="nav-link" href="/profile.html">Profile</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -48,67 +47,41 @@
   </header>
 
   <main>
-
-
-    <!-- Profile -->
     <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 profile p-3 mx-auto">
-          <h3 class="p-3">Your Profile:</h3>
-          <img src="/assets/images/Unknown7.jpg" class="rounded-circle shadow p-3 " alt="...">
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 mx-auto p-5">
-          <h3>Corey Spaceface</h3>
-          <div class="about p-4">
-            <div class="d-flex flex-column mx-auto">
-              <div class="d-flex">
-                <i class="fa-solid fa-microphone-lines p-2"></i>
-                <p class="ms-5 text-danger">NOT IN A BAND</p>
-              </div>
-              <div class="d-flex">
-                <i class="fa-solid fa-guitar p-2"></i>
-                <p class="ms-5">VOCALS, GUITAR</p>
-              </div>
-            </div>
-            <div class="d-flex flex-column mx-auto">
-              <div class="d-flex">
-                <i class="fa-solid fa-eye p-2"></i>
-                <p class="ms-5 text-primary">LOOKING FOR A BAND</p>
-              </div>
-              <div class="d-flex">
-                <i class="fa-solid fa-music p-2"></i>
-                <p class="ms-5">ROCK, POP, ALTERNATIVE</p>
-              </div>
-            </div>
-            <div class="d-flex flex-column mx-auto">
-              <div class="d-flex">
-                <i class="fa-solid fa-house p-2"></i>
-                <p class="ms-5">HELL, NORWAY</p>
-              </div>
-              <div class="d-flex">
-                <i class="fa-solid fa-at p-2"></i>
-                <p class="ms-5">corey.spaceface@mail.com</p>
-              </div>
-            </div>
-            <a href="/editProfile.html"><button class="btn btn-success col-lg-8 mx-auto p-2 my-5 p-4" id="editBtn">Update Profile</button></a>
-          </div>
-          
-        </div>
-      </div>
-    </div>
+      <h1 class="">Create Post</h1>
 
-    <a href="/posts.html"><button class="btn btn-success col-lg-8 mx-auto p-2 my-5 p-4">Create Post</button></a>
-  
+      <form id="createPost" class="row g-3 mt-5">
+        <div class="col-md-12 col-lg-10 mx-auto my-4">
+          <input type="text" name="title" maxlength="50" title="Title must be under 50 characters" class="form-control p-4" id="title" placeholder="Title" required>
+        </div>
+        <div class="col-md-12 col-lg-10 mx-auto my-4">
+          <input type="url" name="media" class="form-control p-4" id="" placeholder="Media link">
+        </div>
+        <div class="col-md-12 col-lg-10 mx-auto my-4">
+          <textarea name="body" id="textArea" cols="58" rows="5" placeholder="Write your post here.."></textarea>
+        </div>
+        <div class="col-md-12 col-lg-10 mx-auto my-4">
+          <textarea id="tags" cols="58" rows="2" placeholder="Write post tags here"></textarea>
+          <input type="button" hidden class="form-control p-4" value="No of words" onkeyup="wordCount();">
+          <div class="col-md-12 col-lg-10 my-2">
+            <input type="text" class="p-4" id="words" placeholder="No. of tags: 50/ " size="10">
+          </div>
+          <button class="submit btn btn-success col-lg-10 mx-auto p-2 my-5 p-4">Create Post</button>
+        </div>
+      </form>
+
+    </div>
   </main>
 
   <footer class="my-5 pt-5 text-muted text-center text-small">
-    <p class="mb-1">© 2017 - 2022 Company Name</p>
+    <p class="mb-1">© 2017–2022 DEMO TAPE</p>
     <ul class="list-inline">
       <li class="list-inline-item"><a href="#">Privacy</a></li>
       <li class="list-inline-item"><a href="#">Terms</a></li>
       <li class="list-inline-item"><a href="#">Support</a></li>
     </ul>
   </footer>
+  </div>
 </body>
 
 </html>
