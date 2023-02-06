@@ -12,7 +12,6 @@ export function createPostListener() {
 
     try {
       const response = await createPost(post);
-      console.log(response);
       
       if (response.ok) {
         window.location.replace("/posts.html");
@@ -21,6 +20,7 @@ export function createPostListener() {
     } catch (error) {
       displayError(createPostForm, error);
     }
-
+    createPostForm.reset();
+    location.reload();
   });
 };

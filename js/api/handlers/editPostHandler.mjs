@@ -33,7 +33,6 @@ export async function editPostListener() {
 
     try {
       const response = await editPost(edit);
-      console.log(response);
       
       if (response.ok) {
         window.location.replace("/posts.html");

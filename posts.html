@@ -17,7 +17,7 @@
   <header>
     <nav class="navbar fixed-top navbar-expand-xl bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand col-2" href="/index.html"><img src="/assets/icons/logo.png" class="logo-img m-3"
+        <a class="navbar-brand col-2" href="/login.html"><img src="/assets/icons/logo.png" class="logo-img m-3"
             alt=""><span class="logo-text">DEMO TAPE</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,10 +29,10 @@
               <a class="nav-link" aria-current="page" href="/index.html">Home</a>
             </li>
             <li class="nav-item fs-5 m-4">
-              <a class="nav-link active" href="/posts.html">Posts</a>
+              <a class="nav-link" aria-current="page" href="/login.html">Login</a>
             </li>
             <li class="nav-item fs-5 m-4">
-              <a class="nav-link" href="/login.html">Login</a>
+              <a class="nav-link active" href="/posts.html">Posts</a>
             </li>
             <li class="nav-item fs-5 m-4">
               <a class="nav-link" href="/profile.html">Profile</a>
@@ -49,61 +49,31 @@
 
   <main>
 
-    <!-- New Messages -->
-    <!-- <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-8 new-message d-flex flex-column mx-auto">
-      <h2 class="my-5 text-center">New Messages:</h2>
+    <!-- Write New Message -->
+    <div class="container">
+      <h1 class="">Create Post</h1>
 
-      <div class="d-flex border rounded-pill bg-primary mx-auto my-2">
-        <div class="p-5 me-3">
-          <img src="/assets/images/avatar-50b2edf3b88fc77b63c3f11440e19bc7.jpg"
-            class="msg-img img-thumbnail rounded-circle shadow" alt="...">
+      <form id="createPost" class="row g-3 mt-5">
+        <div class="col-md-12 col-lg-10 mx-auto my-1">
+          <input type="text" name="title" maxlength="50" title="Title must be under 50 characters" class="form-control p-4" id="title" placeholder="Title" required>
         </div>
-        <div class=" d-flex align-items-center justify-content-center text-white">
-          <h5>Gina</h5>
+        <div class="col-md-12 col-lg-10 mx-auto my-4">
+          <input type="url" name="media" class="form-control p-4" id="" placeholder="Media link">
         </div>
-        <div class="d-flex flex-column justify-content-center p-5">
-            <p class="my-0">Yo Zucchinizit!</p>
-            <p class="my-0">Did you check out Artemis?</p>
-            <p class="my-0">It's just out of this world!!!</p>           
+        <div class="col-md-12 col-lg-10 mx-auto my-4">
+          <textarea name="body" id="textArea" cols="60" rows="5" placeholder="Write your post here.."></textarea>
         </div>
-      </div>
+        <button type="submit" class="btn btn-success col-lg-10 mx-auto p-2 mb-5 p-4">Create Post</button>
+      </form>
 
-      <div class="d-flex border rounded-pill bg-primary mx-auto my-2">
-        <div class="p-5 me-3">
-          <img src="/assets/images/avatar-62f050a8960d6b4168be5202fe112d52.jpg"
-            class="msg-img img-thumbnail rounded-circle shadow" alt="...">
-        </div>
-        <div class=" d-flex align-items-center justify-content-center">
-          <h5>Graham</h5>
-        </div>
-        <div class="d-flex flex-column justify-content-center p-5">
-            <p class="my-0">Yo Zucchinizit!</p>
-            <p class="my-0">Did you check out Artemis?</p>
-            <p class="my-0">It's just out of this world!!!</p>           
-        </div>
-      </div>
-
-      <div class="d-flex border rounded-pill bg-primary mx-auto my-2">
-        <div class="p-5 me-3">
-          <img src="/assets/images/avatar-dcc934724bc0ac64eaf3a1438c6d078d.jpg"
-            class="msg-img img-thumbnail rounded-circle shadow" alt="...">
-        </div>
-        <div class=" d-flex align-items-center justify-content-center text-white">
-          <h5>Clarice</h5>
-        </div>
-        <div class="d-flex flex-column justify-content-center p-5">
-            <p class="my-0">Yo Zucchinizit!</p>
-            <p class="my-0">Did you check out Artemis?</p>
-            <p class="my-0">It's just out of this world!!!</p>           
-        </div>
-      </div>
-    </div> -->
+    </div>
 
     <div class="flex-grow-1 text-dark">
       <div class="container-fluid">
         <div class="d-flex justify-content-center">
-          <div class="my-2" id="posts">
+          <div class="" id="posts">
             <!-- List of post thumbnails -->
+            
           </div>
         </div>
       </div>

@@ -35,7 +35,7 @@ export async function editProfileListener() {
     setTimeout(() => {
       regMsg.style.display = "none";
     }, 7000);
-    // form.reset();
+    
     if (editProfileForm.avatar.value || editProfileForm.banner.value) {
         regMsg.innerHTML = `
                                   <div class="card border-success mx-auto" style="min-width: 50rem;">
@@ -45,15 +45,12 @@ export async function editProfileListener() {
                                   </div>`
                                   form.reset();
                             
-                                  
-      
     } else {
       displayError(editProfileForm, error);
     }
 
     try {
       const response = await editProfile(profile);
-      console.log(response);
       
       if (response.ok) {
         window.location.replace("/profile.html");
@@ -62,8 +59,6 @@ export async function editProfileListener() {
     } catch (error) {
       displayError(editProfileForm, error);
     }
-
-    
 
   });
 };

@@ -1,4 +1,4 @@
-import * as listeners from "./api/handlers/handlersBarrel.mjs";
+import * as handlers from "./api/handlers/handlersBarrel.mjs";
 import * as posts from "./api/posts/postBarrel.mjs"
 
 export async function router() {
@@ -7,40 +7,52 @@ export async function router() {
   switch (path) {
     case "/":
     case "/index.html":
-      console.log("home page");
+      const renderPost = await posts.getPosts();
+      const postContainer = document.querySelector("#specificPosts");
+      posts.renderPostTemplates(renderPost, postContainer);
+      handlers.createPostListener();
+      handlers.viewAllPosts();
       return;
     case "/register.html":
-      console.log("register");
-      listeners.registerFormListener();
+      handlers.registerFormListener();
+      handlers.viewAllPosts();
       return;
     case "/login.html":
-      console.log("login");
-      listeners.loginFormListener();
-      listeners.getTokenListener();
+      handlers.loginFormListener();
+      handlers.getTokenListener();
       return;
     case "/createPost.html":
-      console.log("createPost");
-      listeners.createPostListener();
+      handlers.createPostListener();
       return;
-    case "/editPost.html":
-      console.log("editPost");
-      listeners.editPostListener();
+    case "/editpost.html":
+      handlers.editPostListener();
+      return;
+    case "/profile.html":
+      const renderProfilePosts = await posts.getProfilePosts();
+      const profilePostContainers = document.querySelector("#profilePosts");
+      posts.renderPostTemplates(renderProfilePosts, profilePostContainers);
+      handlers.editPostListener();
+      handlers.createPostListener();
+      posts.editLicence();
       return;
     case "/editProfile.html":
-      console.log("editProfile");
-      listeners.editProfileListener();
+      handlers.editProfileListener();
       return;
     case "/posts.html":
-      console.log("getPosts");
       const renderPosts = await posts.getPosts();
       const postContainers = document.querySelector("#posts");
       posts.renderPostTemplates(renderPosts, postContainers);
-      listeners.viewAllPosts();
+      handlers.viewAllPosts();
+      handlers.createPostListener();
+      posts.editLicence();
       return;
     case "/post.html":
-      listeners.viewPost();
+      posts.getPosts();
+      handlers.viewPost();
+      posts.editLicence();
+      return;
+    case "/editPost.html":
+      handlers.deletePost();
       return;
   }
 }
-
-posts.getPosts().then(console.log);

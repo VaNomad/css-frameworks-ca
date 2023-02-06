@@ -8,5 +8,4 @@ export async function viewPost() {
     const posts = await postMethods.getPost(id);
     const container = document.querySelector("#specificPost");
     renderPostTemplate(posts, container);
-    console.log(posts)
     }

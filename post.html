@@ -17,7 +17,7 @@
   <header>
     <nav class="navbar fixed-top navbar-expand-xl bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand col-2" href="/index.html"><img src="/assets/icons/logo.png" class="logo-img m-3"
+        <a class="navbar-brand col-2" href="/login.html"><img src="/assets/icons/logo.png" class="logo-img m-3"
             alt=""><span class="logo-text">DEMO TAPE</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,10 +29,10 @@
               <a class="nav-link" aria-current="page" href="/index.html">Home</a>
             </li>
             <li class="nav-item fs-5 m-4">
-              <a class="nav-link active" href="/posts.html">Posts</a>
+              <a class="nav-link" aria-current="page" href="/login.html">Login</a>
             </li>
             <li class="nav-item fs-5 m-4">
-              <a class="nav-link" href="/login.html">Login</a>
+              <a class="nav-link active" href="/posts.html">Posts</a>
             </li>
             <li class="nav-item fs-5 m-4">
               <a class="nav-link" href="/profile.html">Profile</a>
@@ -48,43 +48,14 @@
   </header>
 
   <main>
-
-    <!-- Write New Message -->
-    <div id="newPost" class="container">
-      <div class="row d-flex justify-content-center align-items-center mb-5">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8 new-message">
-          <h2 class="mb-5 fs-4">Write New Message:</h2>
-          <form>
-            <div class="border bg-primary rounded-pill p-4">
-              <div class="d-flex p-2">
-                <div class="col-4">
-                  <i class="fa-solid fa-user-plus m-2"></i>  
-                </div>
-                <div class="p-3 d-flex">
-                  <textarea class="container" id="textarea" rows="2" cols="60" placeholder="Write new post here..."></textarea>
-                </div>
-                <div class="col-2 d-flex align-items-center justify-content-center">
-                  <a href="" class="border rounded-pill p-4 shadow" style="color: black; font-size: 30px;"><i class="fa-solid fa-plus"></i></a>
-                </div>
-                <button type="submit" class="btn" style="font-size: 30px;"><i class="fa-solid fa-paper-plane"></i></button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <div id=""></div>
-
-    <div class="flex-grow-1 text-dark">
-      <div class="container-fluid">
+    
+      <div class="container">
         <div class="d-flex justify-content-center">
           <div class="my-2" id="specificPost">
             <!-- List of post thumbnails -->
           </div>
         </div>
       </div>
-    </div>
 
   </main>
 
